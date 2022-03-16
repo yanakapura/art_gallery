@@ -36,3 +36,75 @@ const swiper = new Swiper(".swiper", {
 
   slidesPerView: 4,
 });
+
+document.body.addEventListener("click", (e) => {
+  // console.log(coords);
+  // console.log("window height = ", window.innerHeight);
+  // console.log();
+});
+
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+  const elements = document.querySelectorAll(".time-line--span");
+  elements.forEach((el) => {
+    if (element.id === "time-line--span-1") {
+      element.classList.add("scrolled");
+    } else if (element.id === "time-line--span-2") {
+      setTimeout(() => {
+        element.classList.add("scrolled");
+      }, 600);
+    } else {
+      setTimeout(() => {
+        element.classList.add("scrolled");
+      }, 1100);
+    }
+  });
+};
+
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 0.8)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el);
+    }
+  });
+};
+
+document.addEventListener("scroll", handleScrollAnimation);
+document.addEventListener("DOMContentLoaded", handleScrollAnimation);
+
+// function scrolling() {
+//   const coords = document
+//     .querySelector(".section--5")
+//     .getBoundingClientRect().top;
+//   console.log(coords);
+//   // if (
+//   //   window.innerHeight - coords >= 555 &&
+//   //   window.innerHeight - coords <= 556
+//   // ) {
+//   //   document.querySelector(".time-line--span").style.animation = "3s top";
+//   // }
+// }
