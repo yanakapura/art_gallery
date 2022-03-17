@@ -1,8 +1,28 @@
+// const swiperTestimonial = new Swiper(".swiper--testimonial", {
+//   // Optional parameters
+//   direction: "horizontal",
+//   loop: true,
+
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+
+//   slidesPerView: 1,
+// });
+
 loadEvents();
+loadProducts();
+
 function loadEvents() {
   for (let i = 1; i < 11; i++) {
     const newSlide = document.createElement("div");
     newSlide.classList.add("swiper-slide");
+    newSlide.classList.add("swiper--events-slide");
     if (i % 2 != 0) {
       newSlide.classList.add("owl--bottom");
     }
@@ -19,10 +39,26 @@ function loadEvents() {
   }
 }
 
-// if (current % 2 != 0) {
-//   console.log(newElementId);
-//   document.querySelector(`#${newElementId}`).classList.add("owl--bottom");
-// }
+function loadProducts() {
+  for (let i = 1; i < 11; i++) {
+    const newSlide = document.createElement("div");
+    newSlide.classList.add("swiper-slide");
+    newSlide.classList.add("swiper--shop-slide");
+    newSlide.innerHTML = `<div class="product-image">
+    <img src="img/shop-img-8-768x768.jpg" alt="" />
+  </div>
+  <h4 class="product-name">Linen bag</h4>
+  <div class="product-rating">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-regular fa-star"></i>
+  <i class="fa-regular fa-star"></i>
+  </div>
+  <span class="product-price">29$</span>`;
+    document.querySelector(".swiper--shop-wrapper").append(newSlide);
+  }
+}
 
 const swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -35,12 +71,43 @@ const swiper = new Swiper(".swiper", {
   },
 
   slidesPerView: 4,
+  spaceBetween: 10,
 });
 
-document.body.addEventListener("click", (e) => {
-  // console.log(coords);
-  // console.log("window height = ", window.innerHeight);
-  // console.log();
+const swiperTestimonial = new Swiper(".swiper--testimonial", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  slidesPerView: 1,
+});
+
+const swiperShop = new Swiper(".swiper--shop", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  slidesPerView: 4,
+  slidesPerGroup: 4,
+  spaceBetween: 3,
 });
 
 const scrollElements = document.querySelectorAll(".js-scroll");
@@ -54,14 +121,6 @@ const elementInView = (el, dividend = 1) => {
   );
 };
 
-const elementOutofView = (el) => {
-  const elementTop = el.getBoundingClientRect().top;
-
-  return (
-    elementTop > (window.innerHeight || document.documentElement.clientHeight)
-  );
-};
-
 const displayScrollElement = (element) => {
   const elements = document.querySelectorAll(".time-line--span");
   elements.forEach((el) => {
@@ -70,41 +129,22 @@ const displayScrollElement = (element) => {
     } else if (element.id === "time-line--span-2") {
       setTimeout(() => {
         element.classList.add("scrolled");
-      }, 600);
+      }, 300);
     } else {
       setTimeout(() => {
         element.classList.add("scrolled");
-      }, 1100);
+      }, 800);
     }
   });
 };
 
-const hideScrollElement = (element) => {
-  element.classList.remove("scrolled");
-};
-
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 0.8)) {
+    if (elementInView(el, 1)) {
       displayScrollElement(el);
-    } else if (elementOutofView(el)) {
-      hideScrollElement(el);
     }
   });
 };
 
 document.addEventListener("scroll", handleScrollAnimation);
-document.addEventListener("DOMContentLoaded", handleScrollAnimation);
-
-// function scrolling() {
-//   const coords = document
-//     .querySelector(".section--5")
-//     .getBoundingClientRect().top;
-//   console.log(coords);
-//   // if (
-//   //   window.innerHeight - coords >= 555 &&
-//   //   window.innerHeight - coords <= 556
-//   // ) {
-//   //   document.querySelector(".time-line--span").style.animation = "3s top";
-//   // }
-// }
+window.addEventListener("load", handleScrollAnimation);
