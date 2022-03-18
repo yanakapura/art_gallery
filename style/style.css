@@ -114,9 +114,10 @@ p {
   transform-origin: bottom left;
 }
 
+.header .btn,
 .main .btn {
   background-color: transparent;
-  height: 50;
+  height: 50px;
   width: 155px;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -124,9 +125,32 @@ p {
   letter-spacing: 0.07em;
   margin-top: 50px;
 
-  border: 1px solid rgba(201, 171, 129, 0.7);
+  /* border: 1px solid rgba(201, 171, 129, 0.7); */
+  border: none;
   cursor: pointer;
 }
+
+/* ////////////////////// Animated button //////////////  */
+
+.shape {
+  stroke-dashoffset: 200;
+  stroke-dasharray: 300 25;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: rgba(201, 171, 129, 0.9);
+  transition: all 2s;
+}
+.btn-text {
+  top: -35px;
+  /*   left: 5px; */
+  position: relative;
+}
+.btn:hover .shape {
+  stroke-width: 2px;
+  stroke-dasharray: 425 25;
+  stroke-dashoffset: -125;
+}
+/* //////////////////////////////////////////////////// */
 
 .header .btn,
 .main--slider .btn {
@@ -159,6 +183,7 @@ p {
 
 .main--slider-slide-label,
 .main--slider-bullets {
+  margin-top: 70px;
   position: absolute;
 }
 
@@ -197,14 +222,13 @@ p {
   background-color: rgba(201, 171, 129, 0.8);
 
   position: absolute;
-  top: 49%;
+  top: 50%;
 }
 
 .main--slider-slide-label .title::before,
 .main--slider-slide-label .title::after {
   width: 150px;
   background-color: rgba(255, 255, 255, 0.4);
-  top: 38%;
 }
 
 .title::before {
@@ -279,16 +303,16 @@ p {
 }
 
 .arrow-left::before {
-  transform: rotate(-45deg) translate(-10px, 8px);
+  transform: rotate(-45deg) translate(0px, -2px);
 }
 .arrow-left::after {
-  transform: rotate(45deg) translate(20px, 22px);
+  transform: rotate(45deg) translate(10px, 12px);
 }
 .arrow-right::before {
-  transform: rotate(45deg) translate(10px, 8px);
+  transform: rotate(45deg) translate(0px, -2px);
 }
 .arrow-right::after {
-  transform: rotate(-45deg) translate(-20px, 22px);
+  transform: rotate(-45deg) translate(-10px, 12px);
 }
 
 /* /////////////////////////////////////////// */
@@ -1007,6 +1031,10 @@ p {
 /* ////////////////////////////////////////////// */
 /* ////////////// section 11. contact ///////////// */
 
+.section--11 {
+  background: url(/img/h1-bg-img-3.jpg) no-repeat;
+}
+
 .section--11-label {
   width: 1300px;
 }
@@ -1043,16 +1071,47 @@ p {
 /* /////////////// Footer ///////////////// */
 
 .footer {
-  height: 500px;
-  /* position: fixed; */
+  height: 440px;
+  width: 100%;
 }
 
 .footer--inner {
   z-index: -1;
-  background-color: #272727;
-  height: 500px;
+  height: 440px;
   width: 100%;
-  color: white;
+  background-color: #272727;
   position: fixed;
   bottom: 0;
+}
+
+.footer--inner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.footer--inner,
+.footer--inner a {
+  color: white;
+}
+
+.footer-logo img,
+.footer-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.footer-item p {
+  margin-top: 15px;
+}
+
+.footer-item p:nth-of-type(1),
+.footer-logo {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#footer-address {
+  margin-bottom: 0;
+  margin-top: 46px;
 }

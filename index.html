@@ -31,7 +31,12 @@
         </nav>
       </div>
       <div class="header-right flex-center">
-        <button class="btn btn--tickects">Buy tickects</button>
+        <button class="btn">
+          <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shape" height="50" width="155" />
+            <div class="btn-text">Buy tickects</div>
+          </svg>
+        </button>
         <div class="icons--wrapper flex-center">
           <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
           <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
@@ -40,31 +45,46 @@
     </header>
     <main class="main">
       <div class="main--slider">
-        <div class="main--slider-slide flex-center">
-          <img src="img/h1-rev-bg-img-1.jpg" alt="slide-image-1" />
+        <div class="swiper-wrapper">
+          <div class="main--slider-slide swiper-slide flex-center">
+            <img src="img/h1-rev-bg-img-1.jpg" alt="slide-image-1" />
 
-          <div class="main--slider-slide-label section--title">
-            <h3>History of art department</h3>
-            <h1 class="slide-title title">discover beauty</h1>
-            <button class="btn">View more</button>
-          </div>
-
-          <div class="main--slider-bullets flex-center">
-            <div class="bullet">&#8226;</div>
-            <div class="bullet">&#8226;</div>
-            <div class="bullet">&#8226;</div>
-            <div class="bullet">&#8226;</div>
-          </div>
-
-          <div class="main--slider-arrows flex">
-            <div class="arrow-left">
-              <span></span>
-              <span></span>
+            <div class="main--slider-slide-label section--title">
+              <h3>History of art department</h3>
+              <h1 class="slide-title title">discover beauty</h1>
+              <button class="btn">
+                <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="shape" height="50" width="155" />
+                  <div class="btn-text">View more</div>
+                </svg>
+              </button>
             </div>
-            <div class="arrow-right">
-              <span></span>
-              <span></span>
+          </div>
+          <div class="main--slider-slide swiper-slide flex-center">
+            <img src="img/h1-rev-bg-img-2.jpg" alt="slide-image-1" />
+
+            <div class="main--slider-slide-label section--title">
+              <h3>History of art department</h3>
+              <h1 class="slide-title title">discover beauty</h1>
+              <button class="btn">
+                <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="shape" height="50" width="155" />
+                  <div class="btn-text">View more</div>
+                </svg>
+              </button>
             </div>
+          </div>
+          <!-- <div class="main--slider-bullets flex-center">
+        </div> -->
+        </div>
+        <div class="main--slider-arrows flex">
+          <div class="arrow-left swiper-button-prev">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="arrow-right swiper-button-next">
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
@@ -118,7 +138,12 @@
                 dolor dolorum officiis tempore facere sequi officia ad magni
                 accusantium neque.
               </p>
-              <button class="btn">View more</button>
+              <button class="btn">
+                <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="shape" height="50" width="155" />
+                  <div class="btn-text">View more</div>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -143,7 +168,12 @@
             reprehenderit placeat tempora recusandae exercitationem hic dicta
             nostrum, necessitatibus sequi quas?
           </p>
-          <button class="btn">View more</button>
+          <button class="btn">
+            <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+              <rect class="shape" height="50" width="155" />
+              <div class="btn-text">View more</div>
+            </svg>
+          </button>
         </div>
         <div class="section--2-image">
           <img src="img/h1-img-2.jpg" alt="section-2-image" />
@@ -377,8 +407,15 @@
           <div class="section--7-form">
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
-            <input type="submit" class="btn" placeholder="Subscribe" />
-            <button class="btn">Subscribe</button>
+
+            <!-- <input type="submit" class="btn" placeholder="Subscribe" /> -->
+
+            <button class="btn" type="submit">
+              <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="50" width="155" />
+                <div class="btn-text">View more</div>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -535,18 +572,51 @@
             <input type="text" placeholder="Massage" />
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
-            <input type="submit" class="btn" placeholder="Submit" />
+            <button class="btn" type="submit">
+              <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="50" width="155" />
+                <div class="btn-text">View more</div>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer--inner">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
-        voluptates. Ipsam suscipit porro qui incidunt enim tempora nobis
-        recusandae sapiente commodi explicabo dolore nulla expedita,
-        perspiciatis, eaque deleniti quisquam repudiandae!
+      <div class="footer--inner flex-center">
+        <div class="footer--inner-grid row">
+          <div class="footer-item">
+            <div class="footer-logo">
+              <a href=""><img src="/img/logo-light.png" alt="" /></a>
+            </div>
+            <p id="footer-address">
+              <a href="">673 12 Constitution Lane Massillion</a>
+            </p>
+            <p>781-562-9355, 781-727-6090</p>
+            <p class="footer-license">© 2022 Museum All Rights Reserved</p>
+          </div>
+          <div class="footer-item">
+            <p>Museum info</p>
+            <p><a href="">Events & Shows</a></p>
+            <p><a href="">Exhibitions</a></p>
+            <p><a href="">News & Updates</a></p>
+            <p><a href="">Museum shop</a></p>
+          </div>
+          <div class="footer-item">
+            <p>Opening hours</p>
+            <p>Tue—Thu: 09:00—19:00</p>
+            <p>Fri—Sat: 09:00—17:00</p>
+            <p>Sun: 08:00—18:00</p>
+            <p>Mon: closed</p>
+          </div>
+          <div class="footer-item">
+            <p>Follow us</p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Twitter</a></p>
+          </div>
+        </div>
       </div>
     </footer>
 

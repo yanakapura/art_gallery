@@ -40,7 +40,7 @@ function loadEvents() {
 }
 
 function loadProducts() {
-  for (let i = 1; i < 11; i++) {
+  for (let i = 1; i < 12; i++) {
     const newSlide = document.createElement("div");
     newSlide.classList.add("swiper-slide");
     newSlide.classList.add("swiper--shop-slide");
@@ -60,6 +60,18 @@ function loadProducts() {
   }
 }
 
+const swiperMain = new Swiper(".main--slider", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  spaceBetween: 1,
+});
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
