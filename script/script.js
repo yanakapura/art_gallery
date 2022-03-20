@@ -1,35 +1,74 @@
-// const swiperTestimonial = new Swiper(".swiper--testimonial", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
+// const swiperEventsSlide = {
+//   num: 11,
+//   class: "swiper--events-slide",
+//   html: `<div class="owl-item-image">
+//   <img src="img/show-slider-img-num.jpg" alt="owl-image-2" />
+// </div>
+// <div class="owl-item-info">
+//   <p class="event-date">Mar 1 - Mar 3 2022</p>
+//   <h4 class="event-title">abstract wireframe</h4>
+//   <span></span>
+//   <a class="event-link" href="">View more</a>
+// </div>`,
+//   sliderWrapper: ".owl-stage",
+//   exibitions: true,
+// };
 
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
+// const swiperProductsSlide = {
+//   num: 12,
+//   class: "swiper--shop-slide",
+//   html: `<div class="product-image">
+//   <img src="img/shop-img-num-768x768.jpg" alt="" />
+// </div>
+// <h4 class="product-name">Linen bag</h4>
+// <div class="product-rating">
+// <i class="fa-solid fa-star"></i>
+// <i class="fa-solid fa-star"></i>
+// <i class="fa-solid fa-star"></i>
+// <i class="fa-regular fa-star"></i>
+// <i class="fa-regular fa-star"></i>
+// </div>
+// <span class="product-price">29$</span>`,
+//   sliderWrapper: ".swiper--shop-wrapper",
+//   exibitions: false,
+// };
 
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
+// function loadSlides(slide) {
+//   for (let i = 1; i < slide.num; i++) {
+//     const newSlide = document.createElement("div");
+//     newSlide.classList.add("swiper-slide");
+//     newSlide.classList.add(slide.class);
 
-//   slidesPerView: 1,
-// });
+//     if (slide.exibitions == true && i % 2 != 0) {
+//       newSlide.classList.add("owl--bottom");
+//     }
+
+//     newSlide.innerHTML = slide.html.replace("num", i);
+//     document.querySelector(slide.sliderWrapper).append(newSlide);
+//   }
+// }
+
+// loadSlides(swiperEventsSlide);
+// loadSlides(swiperProductsSlide);
 
 loadEvents();
 loadProducts();
+loadMainSlider();
 
 function loadEvents() {
   for (let i = 1; i < 11; i++) {
     const newSlide = document.createElement("div");
     newSlide.classList.add("swiper-slide");
     newSlide.classList.add("swiper--events-slide");
+    // newSlide.classList.add("js-scroll");
+    // newSlide.classList.add("img-animation");
     if (i % 2 != 0) {
       newSlide.classList.add("owl--bottom");
     }
-    newSlide.innerHTML = `<div class="owl-item-image">
+    newSlide.innerHTML = `<div class="owl-item-image js-scroll img-animation">
       <img src="img/show-slider-img-${i}.jpg" alt="owl-image-2" />
     </div>
-    <div class="owl-item-info">
+    <div class="owl-item-info js-scroll top">
       <p class="event-date">Mar 1 - Mar 3 2022</p>
       <h4 class="event-title">abstract wireframe</h4>
       <span></span>
@@ -60,6 +99,27 @@ function loadProducts() {
   }
 }
 
+function loadMainSlider() {
+  for (let i = 1; i < 5; i++) {
+    const newSlide = document.createElement("div");
+    newSlide.classList.add("swiper-slide");
+    newSlide.classList.add("flex-center");
+    newSlide.classList.add("main--slider-slide");
+    newSlide.innerHTML = `<img src="img/h1-rev-bg-img-${i}.jpg" alt="slide-image-1" />
+    <div class="main--slider-slide-label section--title">
+      <h3 class="js-scroll top-sm">History of art department</h3>
+      <h1 class="slide-title title js-scroll top">discover beauty</h1>
+      <button class="btn js-scroll top">
+        <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+          <rect class="shape" height="50" width="155" />
+          <div class="btn-text">View more</div>
+        </svg>
+      </button>
+    </div>`;
+    document.querySelector(".main--slider-wrapper").append(newSlide);
+  }
+}
+
 const swiperMain = new Swiper(".main--slider", {
   // Optional parameters
   direction: "horizontal",
@@ -68,6 +128,11 @@ const swiperMain = new Swiper(".main--slider", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: "#swiper--main-pagination",
+    clickable: true,
   },
 
   spaceBetween: 1,
@@ -115,6 +180,7 @@ const swiperShop = new Swiper(".swiper--shop", {
 
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 
   slidesPerView: 4,
@@ -134,29 +200,45 @@ const elementInView = (el, dividend = 1) => {
 };
 
 const displayScrollElement = (element) => {
-  const elements = document.querySelectorAll(".time-line--span");
-  elements.forEach((el) => {
-    if (element.id === "time-line--span-1") {
+  if (element.id === "time-line--span-1") {
+    element.classList.add("scrolled");
+  } else if (element.classList.contains("time-line--span")) {
+    setTimeout(() => {
       element.classList.add("scrolled");
-    } else if (element.id === "time-line--span-2") {
-      setTimeout(() => {
-        element.classList.add("scrolled");
-      }, 300);
-    } else {
-      setTimeout(() => {
-        element.classList.add("scrolled");
-      }, 800);
-    }
-  });
+    }, 700);
+  } else if (element.classList.contains("img-animation")) {
+    element.classList.add("scrolled");
+  } else {
+    setTimeout(() => {
+      element.classList.add("scrolled");
+    }, 300);
+  }
 };
 
-const handleScrollAnimation = () => {
+function handleScrollAnimation(removeScrolledClass = false) {
   scrollElements.forEach((el) => {
+    if (removeScrolledClass == true) el.classList.remove("scrolled");
     if (elementInView(el, 1)) {
       displayScrollElement(el);
     }
   });
-};
+}
 
 document.addEventListener("scroll", handleScrollAnimation);
 window.addEventListener("load", handleScrollAnimation);
+
+document.querySelectorAll(".main--slider-arrow").forEach((arrow) => {
+  arrow.addEventListener("click", () => {
+    handleScrollAnimation(true);
+  });
+});
+
+document
+  .querySelector(".navigation--ul")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    if (e.target.classList.contains("nav--link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });

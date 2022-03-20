@@ -1,0 +1,168 @@
+/* ////////////////////// Animated button //////////////  */
+
+.shape {
+  stroke-dashoffset: 200;
+  stroke-dasharray: 300 25;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: rgba(201, 171, 129, 0.9);
+  transition: all 2s;
+}
+.btn-text {
+  top: -35px;
+  /*   left: 5px; */
+  position: relative;
+}
+.btn:hover .shape {
+  stroke-width: 2px;
+  stroke-dasharray: 425 25;
+  stroke-dashoffset: -125;
+}
+
+/* //////////////////////////////////////////////////// */
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.slide-bottom-1 {
+  animation: slide-bottom-1 0.5s ease-in;
+}
+.scrolled.slide-bottom-2 {
+  animation: slide-bottom-2 1.5s ease-in;
+}
+.scrolled.slide-bottom-3 {
+  animation: slide-bottom-3 1s ease-in-out;
+}
+
+.scrolled.top {
+  animation: top 0.6s ease-in-out;
+}
+
+.scrolled.top-sm {
+  animation: top-sm 0.3s ease;
+}
+
+.scrolled.img-to-bottom {
+  animation: img-to-bottom 1s ease-in-out;
+}
+
+.scrolled.img-animation {
+  animation: img-animation 1s ease-in-out;
+}
+
+.scrolled.top::before,
+.scrolled.top::after {
+  animation: to-sides 2s ease;
+}
+
+.scrolled.to-side {
+  animation: to-side 1s ease-in-out;
+}
+
+.scrolled.to-side-lg {
+  animation: to-side-lg 1.3s ease-in-out;
+}
+
+@keyframes slide-bottom-1 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 105px;
+  }
+}
+@keyframes slide-bottom-2 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 750px;
+  }
+}
+@keyframes slide-bottom-3 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 500px;
+  }
+}
+
+@keyframes top {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes top-sm {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes img-to-bottom {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 600px;
+  }
+}
+
+@keyframes img-animation {
+  0% {
+    height: 0%;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes to-sides {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+@keyframes to-side {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 350px;
+    opacity: 1;
+  }
+}
+
+@keyframes to-side-lg {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
