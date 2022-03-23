@@ -715,20 +715,22 @@ p {
 /* /////////// Section 6. Testimonials ////////// */
 
 .section--6 {
-  height: 500px;
+  height: 400px;
   align-items: start;
 
   position: relative;
 }
 
 .swiper--testimonial,
-.swiper--testimonial-arrows {
+.swiper--testimonial-arrows,
+.section-testimonial__swiper {
   width: 670px;
   height: 300px;
   text-align: center;
 }
 
-.swiper--testimonial {
+.swiper--testimonial,
+.section-testimonial__swiper {
   overflow: hidden;
 }
 
@@ -767,8 +769,8 @@ p {
   right: -30%;
 }
 
-#swiper--testimonial-pagination {
-  bottom: 100px;
+#swiper-testimonial__pagination {
+  bottom: 50px;
 }
 
 .swiper-pagination-bullet-active {
@@ -794,7 +796,8 @@ p {
 
 .section--7-label > div,
 .section--8-text-col,
-.section--11-label > div {
+.section--11-label > div,
+.section-form__container > div {
   width: 50%;
 }
 
@@ -805,13 +808,15 @@ p {
 
 .section--7-text .section--title,
 .section--8-text .section--title,
-.section--11-text .section--title {
+.section--11-text .section--title,
+.section-form__text .section--title {
   text-align: start;
 }
 
 .section--7-text h2,
 .section--8-text h2,
-.section--11-text h2 {
+.section--11-text h2,
+.section-form-text h2 {
   margin: 0;
   font-size: 40px;
   letter-spacing: 5px;
@@ -823,7 +828,8 @@ p {
 }
 
 .section--7-form input,
-.section--11-form input {
+.section--11-form input,
+.section-form__form input {
   width: 100%;
   margin-bottom: 48px;
   padding: 3px 7px;

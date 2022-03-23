@@ -168,6 +168,7 @@ const swiperTestimonial = new Swiper(".swiper--testimonial", {
   slidesPerView: 1,
 });
 
+
 const swiperShop = new Swiper(".swiper--shop", {
   // Optional parameters
   direction: "horizontal",

@@ -1,0 +1,187 @@
+.page-title {
+  height: 550px;
+  background-color: aqua;
+  position: relative;
+}
+
+.image-wrapper {
+  background: url("/img/p1-title-img.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 550px;
+  width: 100%;
+}
+
+.page-title .section--title {
+  color: #fff;
+  padding-top: 115px;
+}
+
+.page-title .title::before,
+.page-title .title::after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ////////////////////////////////////////// */
+/* //////////// Section about /////////////// */
+
+.section-about,
+.section-contacts {
+  height: 550px;
+  background-color: #fff;
+}
+
+.section-about .title,
+.section-collection .title,
+.section-contacts .title {
+  margin: 15px auto;
+}
+
+.section-about,
+.section-about__content,
+.section-contacts {
+  padding-top: 100px;
+}
+
+.section-about__content > *,
+.section-about__container > div {
+  width: 50%;
+}
+
+.section-about__text {
+  padding-right: 30px;
+}
+
+.section-about__item {
+  flex-direction: column;
+}
+
+.section-about__item-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2em;
+
+  align-self: flex-start;
+}
+
+.section-about__item-title i {
+  padding-right: 15px;
+  align-self: flex-start;
+}
+
+/* ////////////////////////////////////////////////// */
+/* /////////////////// Section gallery //////////////// */
+
+.section-gallery__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.section-gallery__item {
+  overflow: hidden;
+}
+
+.gallery-item-1 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.gallery-item-4 {
+  grid-row: 1/3;
+  grid-column: 4/5;
+  grid: 4;
+}
+
+.section-gallery__image {
+  height: 100%;
+  width: auto;
+}
+
+/* ////////////////////////////////////////////// */
+/* /////////////// Swiper ////////////// */
+
+.section-testimonial {
+  height: 350px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.section-testimonial .swiper--testimonial-arrows {
+  top: unset;
+}
+
+/* //////////////////////////////////////////////// */
+/* /////////////// Section video ///////////////// */
+
+.section-video {
+  height: 700px;
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////// Section collection ///////////////// */
+
+.section-collection {
+  height: 480px;
+}
+
+.section-collection__container {
+  height: 200px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.section-collection__item li {
+  list-style-type: square;
+  padding-bottom: 10px;
+}
+
+.section-collection__item {
+  width: 200px;
+  padding-left: 20px;
+}
+
+/* ///////////////////////////////////////////// */
+/* //////////////// Section contact ///////////////// */
+
+.section-contact__item {
+  width: 100%;
+  height: 500px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.section-contact__item .title {
+  margin: 5px 0 20px;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.section-contact__item h3 {
+  text-align: start;
+}
+
+.section-contact__item h2::after,
+.section-contact__item h2::before {
+  display: none;
+}
+
+.section-contact__item p {
+    margin-top: 10px;
+}
+
+.section-contact__wrapper {
+  width: 350px;
+  height: 300px;
+}
+
+.map-wrapper iframe {
+  filter: grayscale(1);
+}

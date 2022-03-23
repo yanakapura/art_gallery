@@ -20,11 +20,11 @@
     <header class="header flex">
       <div class="header-left flex-center">
         <div class="logo--wrapper">
-          <img src="img/logo-light.png" alt="logo" class="logo--img" />
+          <a href="#"><img src="img/logo-light.png" alt="logo" class="logo--img" /></a>
         </div>
         <nav class="navigation--wrapper">
           <ul class="navigation--ul flex-center">
-            <li><a href="" class="nav--link">about us</a></li>
+            <li><a href="../pages/about.html" class="nav--link">about us</a></li>
             <li><a href="#events" class="nav--link">events</a></li>
             <li><a href="#history" class="nav--link">history</a></li>
             <li><a href="#blog" class="nav--link">blog</a></li>
@@ -153,9 +153,9 @@
         </div>
       </section>
 
-      <section id="events" class="section--3 flex-center">
+      <section class="section--3 flex-center">
         <div class="section--3-wrapper slider row">
-          <div class="section--title">
+          <div id="events" class="section--title">
             <h3 id="title" class="js-scroll top-sm">Exibition hightlights</h3>
             <h2 class="title js-scroll top">currently on view</h2>
           </div>
@@ -342,8 +342,8 @@
             </div>
           </div>
           <div
-            id="swiper--testimonial-pagination"
-            class="swiper-pagination"
+            id="swiper-testimonial__pagination"
+            class="swiper-pagination "
           ></div>
         </div>
         <div class="swiper--testimonial-arrows flex">
@@ -380,13 +380,10 @@
           <div class="section--7-form">
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
-
-            <!-- <input type="submit" class="btn" placeholder="Subscribe" /> -->
-
             <button class="btn" type="submit">
               <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                 <rect class="shape" height="50" width="155" />
-                <div class="btn-text">View more</div>
+                <div class="btn-text">Subscribe</div>
               </svg>
             </button>
           </div>
@@ -434,8 +431,8 @@
         </div>
       </section>
 
-      <section id="blog" class="section--9 flex-center">
-        <div class="section--title">
+      <section class="section--9 flex-center">
+        <div id="blog" class="section--title">
           <h3 class="js-scroll top-sm">Museum news</h3>
           <h2 class="title js-scroll top">latest blog posts</h2>
         </div>
@@ -488,8 +485,8 @@
         </div>
       </section>
 
-      <section id="shop" class="section--10 flex-center">
-        <div class="section--title">
+      <section class="section--10 flex-center">
+        <div class="section--title" id="shop">
           <h3 class="js-scroll top-sm">Our products</h3>
           <h2 class="title js-scroll top">Museum shop</h2>
           <p class="section--title-paragraph js-scroll top">
@@ -548,7 +545,7 @@
             <button class="btn" type="submit">
               <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                 <rect class="shape" height="50" width="155" />
-                <div class="btn-text">View more</div>
+                <div class="btn-text">Submit</div>
               </svg>
             </button>
           </div>

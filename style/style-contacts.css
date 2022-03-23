@@ -1,0 +1,56 @@
+.image-wrapper {
+  background: url("/img/p2-title-img.jpg") no-repeat;
+}
+
+.section-contacts__text {
+    width: 500px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* ///////////////////////////////////////// */
+/* //////////// Section map ////////////////// */
+
+.section-map {
+    height: 600px;
+}
+
+/* /////////////////////////////////////////// */
+/* /////////////// Section form ///////////////// */
+
+.section-form {
+    height: 450px;
+    align-items: flex-start;
+}
+
+.section-form .section--title {
+    text-align: start;
+}
+
+.section-form__form {
+    margin-right: 100px;
+}
+
+.section-form__form input:nth-child(3) {
+    margin-right: 18px;
+}
+
+.section-form__form input:nth-child(3),
+.section-form__form input:nth-child(4) {
+    width: 48%;
+}
+
+.section-form h2 {
+    margin: 5px 0 30px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.section-form h2::before,
+.section-form h2::after {
+    display: none;
+}
+
+.section-form .btn {
+    margin-top: 10px;
+}
