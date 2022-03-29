@@ -19,17 +19,23 @@
   <body>
     <header class="header flex">
       <div class="header-left flex-center">
-        <div class="logo--wrapper">
-          <a href="#"><img src="img/logo-light.png" alt="logo" class="logo--img" /></a>
+        <div class="logo">
+          <a href="#"
+            ><img src="img/logo-light.png" alt="logo" class="logo__image"
+          /></a>
         </div>
-        <nav class="navigation--wrapper">
-          <ul class="navigation--ul flex-center">
-            <li><a href="../pages/about.html" class="nav--link">about us</a></li>
-            <li><a href="#events" class="nav--link">events</a></li>
-            <li><a href="#history" class="nav--link">history</a></li>
-            <li><a href="#blog" class="nav--link">blog</a></li>
-            <li><a href="#shop" class="nav--link">shop</a></li>
-            <li><a href="#contacts" class="nav--link">contacts</a></li>
+        <nav class="nav">
+          <ul class="nav__ul flex-center">
+            <li>
+              <a href="../pages/about.html" class="nav__link">about us</a>
+            </li>
+            <li><a href="#events" class="nav__link">events</a></li>
+            <li><a href="#history" class="nav__link">history</a></li>
+            <li><a href="#blog" class="nav__link">blog</a></li>
+            <li><a href="#shop" class="nav__link">shop</a></li>
+            <li>
+              <a href="../pages/contacts.html" class="nav__link">contacts</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -37,26 +43,26 @@
         <button class="btn">
           <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
             <rect class="shape" height="50" width="155" />
-            <div class="btn-text">Buy tickects</div>
+            <div class="btn__text">Buy tickects</div>
           </svg>
         </button>
-        <div class="icons--wrapper flex-center">
-          <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-          <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="header__icons flex-center">
+          <div class="header__icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="header__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
       </div>
     </header>
     <main class="main">
-      <div class="main--slider">
-        <div class="main--slider-wrapper swiper-wrapper">
+      <div class="main__slider">
+        <div class="main__slider-wrapper swiper-wrapper">
           <!-- ///// Slides ///// -->
         </div>
-        <div class="main--slider-arrows flex">
-          <div class="main--slider-arrow arrow-left swiper-button-prev">
+        <div class="main__slider-arrows flex">
+          <div class="main__slider-arrow arrow-left swiper-button-prev">
             <span></span>
             <span></span>
           </div>
-          <div class="main--slider-arrow arrow-right swiper-button-next">
+          <div class="main__slider-arrow arrow-right swiper-button-next">
             <span></span>
             <span></span>
           </div>
@@ -65,14 +71,14 @@
       </div>
       <!-- End of slider  -->
 
-      <section class="section--1 flex-center">
-        <div class="section--1-wrapper row">
-          <div class="section--title">
+      <section class="section-1 flex-center">
+        <div class="section-1__wrapper row">
+          <div class="section__title">
             <h3 class="js-scroll top-sm">History of art department</h3>
             <h2 class="title js-scroll top">national museum</h2>
           </div>
-          <div class="section--1-grid">
-            <div class="section--1-grid-item">
+          <div class="section-1__grid">
+            <div class="section-1__grid-item">
               <p>
                 <span
                   >Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -92,12 +98,12 @@
                 ab deserunt sunt. Culpa.
               </p>
             </div>
-            <div class="section--1-grid-item">
-              <div class="section--1-image js-scroll img-animation">
+            <div class="section-1__grid-item">
+              <div class="section-1__image js-scroll img-animation">
                 <img src="img/h1-img-1.jpg" alt="section-1-image" />
               </div>
             </div>
-            <div class="section--1-grid-item">
+            <div class="section-1__grid-item">
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Sapiente saepe quam aut rerum eligendi suscipit nisi quis iure
@@ -114,7 +120,7 @@
               <button class="btn">
                 <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                   <rect class="shape" height="50" width="155" />
-                  <div class="btn-text">View more</div>
+                  <div class="btn__text">View more</div>
                 </svg>
               </button>
             </div>
@@ -122,9 +128,9 @@
         </div>
       </section>
 
-      <section class="section--2">
-        <div class="section--2-item flex">
-          <div class="section--title">
+      <section class="section-2">
+        <div class="section-2__item flex">
+          <div class="section__title">
             <h3 class="js-scroll top-sm">The Museum archive</h3>
             <h2 class="title js-scroll top">Works of art</h2>
           </div>
@@ -144,27 +150,27 @@
           <button class="btn">
             <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
               <rect class="shape" height="50" width="155" />
-              <div class="btn-text">View more</div>
+              <div class="btn__text">View more</div>
             </svg>
           </button>
         </div>
-        <div class="section--2-image">
+        <div class="section-2__image">
           <img src="img/h1-img-2.jpg" alt="section-2-image" />
         </div>
       </section>
 
-      <section class="section--3 flex-center">
-        <div class="section--3-wrapper slider row">
-          <div id="events" class="section--title">
+      <section class="section-3 flex-center">
+        <div class="section-3__wrapper slider row">
+          <div id="events" class="section__title">
             <h3 id="title" class="js-scroll top-sm">Exibition hightlights</h3>
             <h2 class="title js-scroll top">currently on view</h2>
           </div>
-          <div class="events--owl swiper">
-            <div class="owl-stage swiper-wrapper flex">
+          <div class="events-owl swiper">
+            <div class="owl__stage swiper-wrapper flex">
               <!-- /// Slides /// -->
             </div>
           </div>
-          <div class="events--owl-arrows flex">
+          <div class="events-owl__arrows flex">
             <div class="arrow-left swiper-button-prev">
               <span></span>
               <span></span>
@@ -177,19 +183,19 @@
         </div>
       </section>
 
-      <section class="section--4 flex-center">
-        <div class="section--4-label js-scroll to-side">
+      <section class="section-4 flex-center">
+        <div class="section-4__label js-scroll to-side">
           <h3>STILL&nbsp;LIFE&nbsp;WITH&nbsp;JAR, CUP&nbsp;AND&nbsp;APPLES</h3>
           <p>Paul Cézanne, 1877</p>
         </div>
       </section>
 
-      <section id="history" class="section--5 flex-center">
-        <div class="section--5-wrapper row">
-          <div class="section--title">
+      <section id="history" class="section-5 flex-center">
+        <div class="section-5__wrapper row">
+          <div class="section__title">
             <h3 class="js-scroll top-sm">History of the Museum</h3>
             <h2 class="title js-scroll top">New readings</h2>
-            <p class="section--title-paragraph js-scroll top">
+            <p class="section__paragraph js-scroll top">
               <span
                 >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Illum, quidem reiciendis nihil accusamus veritatis blanditiis
@@ -197,18 +203,18 @@
               >
             </p>
           </div>
-          <div class="section--5-grid">
-            <div class="section--5-image js-scroll img-to-bottom">
+          <div class="section-5__grid">
+            <div class="section-5__image js-scroll img-to-bottom">
               <img src="/img/h1-time-line-img-1.jpg" alt="time-line-image-1" />
             </div>
-            <div class="section--5-text flex-center js-scroll top">
+            <div class="section-5__text flex-center js-scroll top">
               <span class="circle">
-                <span class="circle-line"></span>
-                <p class="circle-year">1910</p>
+                <span class="circle__line"></span>
+                <p class="circle__year">1910</p>
               </span>
               <div class="text-center">
-                <div class="time-line--title">
-                  <div class="section--title">
+                <div class="time-line__title">
+                  <div class="section__title">
                     <h3>History of the Museum</h3>
                     <h2 class="title">The archive</h2>
                   </div>
@@ -231,15 +237,15 @@
               </div>
             </div>
             <div
-              class="section--5-text section--5-text-left flex-center js-scroll top"
+              class="section-5__text section-5__text-left flex-center js-scroll top"
             >
               <span class="circle circle-left">
-                <span class="circle-line circle-line-left"></span>
-                <p class="circle-year circle-year-left">1982</p>
+                <span class="circle__line circle__line-left"></span>
+                <p class="circle__year circle__year-left">1982</p>
               </span>
               <div class="text-center">
-                <div class="time-line--title">
-                  <div class="section--title">
+                <div class="time-line__title">
+                  <div class="section__title">
                     <h3>Moving in</h3>
                     <h2 class="title">New home</h2>
                   </div>
@@ -262,21 +268,21 @@
               </div>
             </div>
             <div
-              class="section--5-image section--5-image-right js-scroll img-to-bottom"
+              class="section-5__image section-5__image-right js-scroll img-to-bottom"
             >
               <img src="img/h1-time-line-img-2.jpg" alt="time-line-image-2" />
             </div>
-            <div class="section--5-image js-scroll img-to-bottom">
+            <div class="section-5__image js-scroll img-to-bottom">
               <img src="img/h1-time-line-img-3.jpg" alt="time-line-image-3" />
             </div>
-            <div class="section--5-text flex-center js-scroll top">
+            <div class="section-5__text flex-center js-scroll top">
               <span class="circle">
-                <span class="circle-line"></span>
-                <p class="circle-year">2002</p>
+                <span class="circle__line"></span>
+                <p class="circle__year">2002</p>
               </span>
               <div class="text-center">
-                <div class="time-line--title">
-                  <div class="section--title">
+                <div class="time-line__title">
+                  <div class="section__title">
                     <h3>Art & Science</h3>
                     <h2 class="title">Events</h2>
                   </div>
@@ -301,52 +307,52 @@
             <div class="time-line">
               <span
                 id="time-line--span-1"
-                class="time-line--span js-scroll slide-bottom-1"
+                class="time-line__span js-scroll slide-bottom-1"
               ></span>
               <span
                 id="time-line--span-2"
-                class="time-line--span js-scroll slide-bottom-2"
+                class="time-line__span js-scroll slide-bottom-2"
               ></span>
-              <span class="time-line--span js-scroll slide-bottom-2"></span>
-              <span class="time-line--span js-scroll slide-bottom-3"></span>
+              <span class="time-line__span js-scroll slide-bottom-2"></span>
+              <span class="time-line__span js-scroll slide-bottom-3"></span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section--6 flex-center">
-        <div class="swiper--testimonial">
+      <section class="section-6 flex-center">
+        <div class="swiper-testimonial">
           <div class="swiper-wrapper">
-            <div class="swiper-slide swiper--testimonial-slide flex-center">
-              <div class="testimonial--quotes">,,</div>
-              <p class="testimonial--text">
+            <div class="swiper-slide swiper-testimonial__slide flex-center">
+              <div class="testimonial__quotes">,,</div>
+              <p class="testimonial__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Placeat tenetur nostrum molestias ad illo qui. Eaque qui
                 molestiae architecto accusantium nostrum ut quas maiores, cum,
                 commodi animi perspiciatis deserunt alias.
               </p>
-              <h4 class="testimonial--author">Isabel Tillman</h4>
-              <div class="testimonial--author-job">Visitor</div>
+              <h4 class="testimonial__author">Isabel Tillman</h4>
+              <div class="testimonial__author-job">Visitor</div>
             </div>
 
-            <div class="swiper-slide swiper--testimonial-slide flex-center">
-              <div class="testimonial--quotes">,,</div>
-              <p class="testimonial--text">
+            <div class="swiper-slide swiper-testimonial__slide flex-center">
+              <div class="testimonial__quotes">,,</div>
+              <p class="testimonial__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Placeat tenetur nostrum molestias ad illo qui. Eaque qui
                 molestiae architecto accusantium nostrum ut quas maiores, cum,
                 commodi animi perspiciatis deserunt alias.
               </p>
-              <h4 class="testimonial--author">Isabel Tillman</h4>
-              <div class="testimonial--author-job">Visitor</div>
+              <h4 class="testimonial__author">Isabel Tillman</h4>
+              <div class="testimonial__author-job">Visitor</div>
             </div>
           </div>
           <div
             id="swiper-testimonial__pagination"
-            class="swiper-pagination "
+            class="swiper-pagination"
           ></div>
         </div>
-        <div class="swiper--testimonial-arrows flex">
+        <div class="swiper-testimonial__arrows flex">
           <div class="arrow-left swiper-button-prev">
             <span></span>
             <span></span>
@@ -358,10 +364,10 @@
         </div>
       </section>
 
-      <section class="section--7 flex-center">
-        <div class="section--7-label row flex-center">
-          <div class="section--7-text">
-            <div class="section--title">
+      <section class="section-7 flex-center">
+        <div class="section-7__label row flex-center">
+          <div class="section-7__text">
+            <div class="section__title">
               <h3 class="js-scroll top-sm">Museum news</h3>
               <h2 class="title js-scroll top">museum news</h2>
             </div>
@@ -377,24 +383,24 @@
               veritatis porro dicta beatae.
             </p>
           </div>
-          <div class="section--7-form">
+          <div class="section-7__form">
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <button class="btn" type="submit">
               <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                 <rect class="shape" height="50" width="155" />
-                <div class="btn-text">Subscribe</div>
+                <div class="btn__text">Subscribe</div>
               </svg>
             </button>
           </div>
         </div>
       </section>
 
-      <section class="section--8 flex-center">
-        <div class="section--8-wrapper row">
-          <div class="section--8-text flex">
-            <div class="section--8-text-col">
-              <div class="section--title">
+      <section class="section-8 flex-center">
+        <div class="section-8__wrapper row">
+          <div class="section-8__text flex">
+            <div class="section-8__text-col">
+              <div class="section__title">
                 <h3 class="js-scroll top-sm">Museum news</h3>
                 <h2 class="title js-scroll top">museum news</h2>
               </div>
@@ -412,7 +418,7 @@
                 obcaecati. Adipisci porro dicta delectus.
               </p>
             </div>
-            <div class="section--8-text-col">
+            <div class="section-8__text-col">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Expedita temporibus porro quasi quidem cumque ex sequi cum illum
@@ -425,71 +431,71 @@
               </p>
             </div>
           </div>
-          <div class="section--8-image js-scroll to-side-lg">
+          <div class="section-8__image js-scroll to-side-lg">
             <img src="img/h1-img-3.jpg" alt="section-8-img" />
           </div>
         </div>
       </section>
 
-      <section class="section--9 flex-center">
-        <div id="blog" class="section--title">
+      <section class="section-9 flex-center">
+        <div id="blog" class="section__title">
           <h3 class="js-scroll top-sm">Museum news</h3>
           <h2 class="title js-scroll top">latest blog posts</h2>
         </div>
-        <div class="section--9-wrapper row flex">
-          <div class="blog-item">
-            <div class="blog-image">
+        <div class="section-9__wrapper row flex">
+          <div class="blog__item">
+            <div class="blog__image">
               <img src="img/main-blog-list-img-1.jpg" alt="" />
             </div>
-            <div class="blog-info-wrapper">
-              <p class="event-date">September 15, 2022</p>
-              <h4 class="event-title">November in the museum</h4>
-              <p class="blog-info">
+            <div class="blog__info-wrapper">
+              <p class="event__date">September 15, 2022</p>
+              <h4 class="event__title">November in the museum</h4>
+              <p class="blog__info">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Delectus, quidem. Molestias, dolor illum. Cum, temporibus.
               </p>
               <span></span>
-              <a class="event-link" href="">Read more</a>
+              <a class="event__link" href="">Read more</a>
             </div>
           </div>
-          <div class="blog-item">
-            <div class="blog-image">
+          <div class="blog__item">
+            <div class="blog__image">
               <img src="img/main-blog-list-img-2.jpg" alt="" />
             </div>
-            <div class="blog-info-wrapper">
-              <p class="event-date">September 15, 2022</p>
-              <h4 class="event-title">November in the museum</h4>
-              <p class="blog-info">
+            <div class="blog__info-wrapper">
+              <p class="event__date">September 15, 2022</p>
+              <h4 class="event__title">November in the museum</h4>
+              <p class="blog__info">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Delectus, quidem. Molestias, dolor illum. Cum, temporibus.
               </p>
               <span></span>
-              <a class="event-link" href="">Read more</a>
+              <a class="event__link" href="">Read more</a>
             </div>
           </div>
-          <div class="blog-item">
-            <div class="blog-image">
+          <div class="blog__item">
+            <div class="blog__image">
               <img src="img/main-blog-list-img-3.jpg" alt="" />
             </div>
-            <div class="blog-info-wrapper">
-              <p class="event-date">September 15, 2022</p>
-              <h4 class="event-title">November in the museum</h4>
-              <p class="blog-info">
+            <div class="blog__info-wrapper">
+              <p class="event__date">September 15, 2022</p>
+              <h4 class="event__title">November in the museum</h4>
+              <p class="blog__info">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Delectus, quidem. Molestias, dolor illum. Cum, temporibus.
               </p>
               <span></span>
-              <a class="event-link" href="">Read more</a>
+              <a class="event__link" href="">Read more</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section--10 flex-center">
-        <div class="section--title" id="shop">
+      <section class="section-10 flex-center">
+        <div class="section__title" id="shop">
           <h3 class="js-scroll top-sm">Our products</h3>
           <h2 class="title js-scroll top">Museum shop</h2>
-          <p class="section--title-paragraph js-scroll top">
+          <p class="section__paragraph js-scroll top">
             <span
               >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
               quidem reiciendis nihil accusamus veritatis blanditiis obcaecati
@@ -497,14 +503,14 @@
             >
           </p>
         </div>
-        <div class="swiper--shop row">
-          <div class="swiper--shop-wrapper swiper-wrapper">
+        <div class="swiper-shop row">
+          <div class="swiper-shop__wrapper swiper-wrapper">
             <!-- ///////// Slides ///////// -->
           </div>
 
-          <div id="swiper--shop-pagination" class="swiper-pagination"></div>
+          <div id="swiper-shop__pagination" class="swiper__pagination"></div>
 
-          <div class="swiper--shop-arrows flex">
+          <div class="swiper-shop__arrows flex">
             <div class="arrow-left swiper-button-prev">
               <span></span>
               <span></span>
@@ -517,10 +523,10 @@
         </div>
       </section>
 
-      <section id="contacts" class="section--11 flex-center">
-        <div class="section--11-label flex">
-          <div class="section--11-text">
-            <div class="section--title">
+      <section id="contacts" class="section-11 flex-center">
+        <div class="section-11__label flex">
+          <div class="section-11__text">
+            <div class="section__title">
               <h3 class="js-scroll top-sm">Get in touch</h3>
               <h2 class="title js-scroll top">contact</h2>
             </div>
@@ -532,20 +538,20 @@
               <span>781-727-6090</span>
             </p>
             <p><span>musea@qodeinteractive.com</span></p>
-            <div class="contact--icons">
+            <div class="contact__icons">
               <a href=""><i class="fa-brands fa-facebook-f"></i></a>
               <a href=""><i class="fa-brands fa-instagram"></i></a>
               <a href=""><i class="fa-brands fa-twitter"></i></a>
             </div>
           </div>
-          <div class="section--11-form">
+          <div class="section-11__form">
             <input type="text" placeholder="Massage" />
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <button class="btn" type="submit">
               <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                 <rect class="shape" height="50" width="155" />
-                <div class="btn-text">Submit</div>
+                <div class="btn__text">Submit</div>
               </svg>
             </button>
           </div>
@@ -554,33 +560,33 @@
     </main>
 
     <footer class="footer">
-      <div class="footer--inner flex-center">
-        <div class="footer--inner-grid row">
-          <div class="footer-item">
-            <div class="footer-logo">
+      <div class="footer__inner flex-center">
+        <div class="footer__grid row">
+          <div class="footer__item">
+            <div class="footer__logo">
               <a href=""><img src="/img/logo-light.png" alt="" /></a>
             </div>
-            <p id="footer-address">
+            <p id="footer__address">
               <a href="">673 12 Constitution Lane Massillion</a>
             </p>
             <p>781-562-9355, 781-727-6090</p>
-            <p class="footer-license">© 2022 Museum All Rights Reserved</p>
+            <p class="footer__license">© 2022 Museum All Rights Reserved</p>
           </div>
-          <div class="footer-item">
+          <div class="footer__item">
             <p>Museum info</p>
             <p><a href="">Events & Shows</a></p>
             <p><a href="">Exhibitions</a></p>
             <p><a href="">News & Updates</a></p>
             <p><a href="">Museum shop</a></p>
           </div>
-          <div class="footer-item">
+          <div class="footer__item">
             <p>Opening hours</p>
             <p>Tue—Thu: 09:00—19:00</p>
             <p>Fri—Sat: 09:00—17:00</p>
             <p>Sun: 08:00—18:00</p>
             <p>Mon: closed</p>
           </div>
-          <div class="footer-item">
+          <div class="footer__item">
             <p>Follow us</p>
             <p><a href="">Facebook</a></p>
             <p><a href="">Instagram</a></p>
@@ -595,6 +601,9 @@
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script/dinamic-loading.js"></script>
+    <script src="script/swipers.js"></script>
+    <script src="script/scroll-animation.js"></script>
     <script src="script/script.js"></script>
   </body>
 </html>

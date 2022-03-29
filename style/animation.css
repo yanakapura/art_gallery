@@ -8,9 +8,8 @@
   stroke: rgba(201, 171, 129, 0.9);
   transition: all 2s;
 }
-.btn-text {
-  top: -35px;
-  /*   left: 5px; */
+.btn__text {
+  top: -3.5rem;
   position: relative;
 }
 .btn:hover .shape {
@@ -35,21 +34,31 @@
 }
 .scrolled.slide-bottom-2 {
   animation: slide-bottom-2 1.5s ease-in;
+  animation-delay: 1.2s;
+  animation-fill-mode: backwards;
 }
 .scrolled.slide-bottom-3 {
   animation: slide-bottom-3 1s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
 }
 
 .scrolled.top {
   animation: top 0.6s ease-in-out;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
 }
 
 .scrolled.top-sm {
   animation: top-sm 0.3s ease;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
 }
 
 .scrolled.img-to-bottom {
   animation: img-to-bottom 1s ease-in-out;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
 }
 
 .scrolled.img-animation {
@@ -59,14 +68,26 @@
 .scrolled.top::before,
 .scrolled.top::after {
   animation: to-sides 2s ease;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
 }
 
 .scrolled.to-side {
   animation: to-side 1s ease-in-out;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
 }
 
 .scrolled.to-side-lg {
   animation: to-side-lg 1.3s ease-in-out;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
+}
+
+.scrolled.cart-to-bottom {
+  animation: cart-to-bottom 1.3s ease-in-out;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes slide-bottom-1 {
@@ -74,7 +95,7 @@
     height: 0;
   }
   100% {
-    height: 105px;
+    height: 10.5rem;
   }
 }
 @keyframes slide-bottom-2 {
@@ -82,7 +103,7 @@
     height: 0;
   }
   100% {
-    height: 750px;
+    height: 75rem;
   }
 }
 @keyframes slide-bottom-3 {
@@ -90,13 +111,13 @@
     height: 0;
   }
   100% {
-    height: 500px;
+    height: 50rem;
   }
 }
 
 @keyframes top {
   0% {
-    transform: translateY(50px);
+    transform: translateY(5rem);
     opacity: 0;
   }
   100% {
@@ -107,7 +128,7 @@
 
 @keyframes top-sm {
   0% {
-    transform: translateY(30px);
+    transform: translateY(3rem);
     opacity: 0;
   }
   100% {
@@ -121,7 +142,16 @@
     height: 0px;
   }
   100% {
-    height: 600px;
+    height: 60rem;
+  }
+}
+
+@keyframes cart-to-bottom {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 20rem;
   }
 }
 
@@ -141,7 +171,7 @@
     width: 0px;
   }
   100% {
-    width: 160px;
+    width: 16rem;
   }
 }
 
@@ -151,7 +181,7 @@
     opacity: 0;
   }
   100% {
-    width: 350px;
+    width: 35rem;
     opacity: 1;
   }
 }

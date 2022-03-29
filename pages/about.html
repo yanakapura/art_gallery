@@ -20,17 +20,17 @@
   <body>
     <header class="header flex">
       <div class="header-left flex-center">
-        <div class="logo--wrapper">
-          <a href="../index.html"><img src="../img/logo-light.png" alt="logo" class="logo--img" /></a>
+        <div class="logo">
+          <a href="../index.html"><img src="../img/logo-light.png" alt="logo" class="logo__image" /></a>
         </div>
-        <nav class="navigation--wrapper">
-          <ul class="navigation--ul flex-center">
-            <li><a href="" class="nav--link">about us</a></li>
-            <li><a href="#events" class="nav--link">events</a></li>
-            <li><a href="#history" class="nav--link">history</a></li>
-            <li><a href="#blog" class="nav--link">blog</a></li>
-            <li><a href="#shop" class="nav--link">shop</a></li>
-            <li><a href="#contacts" class="nav--link">contacts</a></li>
+        <nav class="nav">
+          <ul class="nav__ul flex-center">
+            <li><a href="../pages/about.html" class="nav__link">about us</a></li>
+            <li><a href="../index.html#events" class="nav__link">events</a></li>
+            <li><a href="../index.html#history" class="nav__link">history</a></li>
+            <li><a href="../index.html#blog" class="nav__link">blog</a></li>
+            <li><a href="../index.html#shop" class="nav__link">shop</a></li>
+            <li><a href="../pages/contacts.html" class="nav__link">contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -38,30 +38,30 @@
         <button class="btn">
           <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
             <rect class="shape" height="50" width="155" />
-            <div class="btn-text">Buy tickects</div>
+            <div class="btn__text">Buy tickects</div>
           </svg>
         </button>
-        <div class="icons--wrapper flex-center">
-          <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-          <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="header__icons flex-center">
+          <div class="header__icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="header__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
       </div>
     </header>
 
     <main class="main">
       <section class="page-title flex-center">
-        <div class="page-title image-wrapper">
+        <div class="page-title__image">
         </div>
-        <div class="section--title">
+        <div class="section__title">
           <h1 class="title js-scroll top">About us</h1>
         </div>
       </section>
 
       <section class="section-about">
-        <div class="section--title">
+        <div class="section__title">
           <h3 class="js-scroll top-sm">About our house</h3>
           <h2 class="title js-scroll top">The museum</h2>
-          <p class="section--title-paragraph js-scroll top">
+          <p class="section__paragraph js-scroll top">
             <span
               >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
               quidem reiciendis nihil accusamus veritatis blanditiis obcaecati
@@ -79,7 +79,7 @@
           </p>
           <div class="section-about__container flex-center">
             <div class="section-about__item flex-center">
-              <h4 class="section-about__item-title">
+              <h4 class="section-about__title">
                 <i class="fa-regular fa-clock"></i> Opening hours
               </h4>
               <p>
@@ -91,7 +91,7 @@
               </p>
             </div>
             <div class="section-about__item flex-center">
-              <h4 class="section-about__item-title">
+              <h4 class="section-about__title">
                 <i class="fa-solid fa-ticket"></i> Admissions
               </h4>
               <p>
@@ -108,63 +108,62 @@
 
       <section class="section-gallery">
           <div class="section-gallery__wrapper row">
-              <div class="section-gallery__item gallery-item-1">
+              <div class="section-gallery__item gallery__item-1">
                   <img class="section-gallery__image" src="/img/p1-img-1.jpg"></img>
               </div>
-              <div class="section-gallery__item gallery-item-2">
+              <div class="section-gallery__item gallery__item-2">
                   <img class="section-gallery__image" src="/img/p1-img-2-650x650.jpg"></img>
               </div>
-              <div class="section-gallery__item gallery-item-3">
+              <div class="section-gallery__item gallery__item-3">
                   <img class="section-gallery__image" src="/img/p1-img-3-650x650.jpg"></img>
               </div>
-              <div class="section-gallery__item gallery-item-4">
+              <div class="section-gallery__item gallery__item-4">
                   <img class="section-gallery__image" src="/img/p1-img-4.jpg"></img>
                 </div>
           </div>
       </section>
 
     <section class="section-testimonial flex-center">
-        <div class="section-testimonial__swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper--testimonial-slide flex-center">
-              <div class="testimonial--quotes">,,</div>
-              <p class="testimonial--text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Placeat tenetur nostrum molestias ad illo qui. Eaque qui
-                molestiae architecto accusantium nostrum ut quas maiores, cum,
-                commodi animi perspiciatis deserunt alias.
-              </p>
-              <h4 class="testimonial--author">Isabel Tillman</h4>
-              <div class="testimonial--author-job">Visitor</div>
-            </div>
+      <div class="swiper-testimonial">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-testimonial__slide flex-center">
+            <div class="testimonial__quotes">,,</div>
+            <p class="testimonial__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Placeat tenetur nostrum molestias ad illo qui. Eaque qui
+              molestiae architecto accusantium nostrum ut quas maiores, cum,
+              commodi animi perspiciatis deserunt alias.
+            </p>
+            <h4 class="testimonial__author">Isabel Tillman</h4>
+            <div class="testimonial__author-job">Visitor</div>
+          </div>
 
-            <div class="swiper-slide swiper--testimonial-slide flex-center">
-              <div class="testimonial--quotes">,,</div>
-              <p class="testimonial--text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Placeat tenetur nostrum molestias ad illo qui. Eaque qui
-                molestiae architecto accusantium nostrum ut quas maiores, cum,
-                commodi animi perspiciatis deserunt alias.
-              </p>
-              <h4 class="testimonial--author">Isabel Tillman</h4>
-              <div class="testimonial--author-job">Visitor</div>
-            </div>
-          </div>
-          <div
-            id="swiper-testimonial__pagination-about"
-            class="swiper-pagination "
-          ></div>
-        </div>
-        <div class="swiper--testimonial-arrows flex">
-          <div class="arrow-left swiper-button-prev">
-            <span></span>
-            <span></span>
-          </div>
-          <div class="arrow-right swiper-button-next">
-            <span></span>
-            <span></span>
+          <div class="swiper-slide swiper-testimonial__slide flex-center">
+            <div class="testimonial__quotes">,,</div>
+            <p class="testimonial__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Placeat tenetur nostrum molestias ad illo qui. Eaque qui
+              molestiae architecto accusantium nostrum ut quas maiores, cum,
+              commodi animi perspiciatis deserunt alias.
+            </p>
+            <h4 class="testimonial__author">Isabel Tillman</h4>
+            <div class="testimonial__author-job">Visitor</div>
           </div>
         </div>
+        <div
+          class="swiper-pagination"
+        ></div>
+      </div>
+      <div class="swiper-testimonial__arrows flex">
+        <div class="arrow-left swiper-button-prev">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="arrow-right swiper-button-next">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       </section>
 
       <section class="section-video flex-center">
@@ -172,10 +171,10 @@
       </section>
 
       <section class="section-collection">
-        <div class="section--title">
+        <div class="section__title">
             <h3 class="js-scroll top-sm">Artworks archive</h3>
             <h2 class="title js-scroll top">The collection</h2>
-            <p class="section--title-paragraph js-scroll top">
+            <p class="section__title-paragraph js-scroll top">
               <span
                 >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
                 quidem reiciendis nihil accusamus veritatis blanditiis obcaecati
@@ -222,7 +221,7 @@
       <section class="section-contacts flex">
           <div class="section-contact__item">
               <div class="section-contact__wrapper">
-              <div class="section--title">
+              <div class="section__title">
                   <h3 class="js-scroll top-sm">Find the Museum</h3>
                   <h2 class="title js-scroll top">visit us</h2>
                 </div>
@@ -234,19 +233,19 @@
                     781-727-6090
                 </p>
                 <p>musea@qodeinteractive.com</p>
-                <div class="contact--icons">
+                <div class="contact__icons">
                     <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
                 </div>
                 </div>
             </div>
-            <div class="section-contact__item map-wrapper">
+            <div class="section-contact__item map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96725.25864703555!2d-74.02080961009264!3d40.747411029259396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f97bdb102b%3A0xea9f8fc0b3ffff55!2z0J3RjNGOLdCZ0L7RgNC60YHQutC40Lkg0LzRg9C30LXQuSDRgdC-0LLRgNC10LzQtdC90L3QvtCz0L4g0LjRgdC60YPRgdGB0YLQstCw!5e0!3m2!1sru!2sby!4v1648047546950!5m2!1sru!2sby" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="section-contact__item flex">
                 <div class="section-contact__wrapper">
-                    <div class="section--title">
+                    <div class="section__title">
                           <h3 class="js-scroll top-sm">Museum promotions</h3>
                           <h2 class="title js-scroll top">Membership</h2>
                         </div>
@@ -258,7 +257,7 @@
                         <button class="btn">
                           <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="50" width="155" />
-                            <div class="btn-text">View more</div>
+                            <div class="btn__text">View more</div>
                           </svg>
                         </button>
                     </div>
@@ -271,33 +270,33 @@
     </main>
 
     <footer class="footer">
-      <div class="footer--inner flex-center">
-        <div class="footer--inner-grid row">
-          <div class="footer-item">
-            <div class="footer-logo">
+      <div class="footer__inner flex-center">
+        <div class="footer__grid row">
+          <div class="footer__item">
+            <div class="footer__logo">
               <a href=""><img src="../img/logo-light.png" alt="" /></a>
             </div>
             <p id="footer-address">
               <a href="">673 12 Constitution Lane Massillion</a>
             </p>
             <p>781-562-9355, 781-727-6090</p>
-            <p class="footer-license">© 2022 Museum All Rights Reserved</p>
+            <p class="footer__license">© 2022 Museum All Rights Reserved</p>
           </div>
-          <div class="footer-item">
+          <div class="footer__item">
             <p>Museum info</p>
             <p><a href="">Events & Shows</a></p>
             <p><a href="">Exhibitions</a></p>
             <p><a href="">News & Updates</a></p>
             <p><a href="">Museum shop</a></p>
           </div>
-          <div class="footer-item">
+          <div class="footer__item">
             <p>Opening hours</p>
             <p>Tue—Thu: 09:00—19:00</p>
             <p>Fri—Sat: 09:00—17:00</p>
             <p>Sun: 08:00—18:00</p>
             <p>Mon: closed</p>
           </div>
-          <div class="footer-item">
+          <div class="footer__item">
             <p>Follow us</p>
             <p><a href="">Facebook</a></p>
             <p><a href="">Instagram</a></p>
@@ -312,7 +311,8 @@
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../script/script-about.js"></script>
-    <!-- <script src="../script/script.js"></script> -->
+    <script src="../script/swipers.js"></script>
+    <script src="../script/scroll-animation.js"></script>
+    <script src="../script/script.js"></script>
   </body>
 </html>
