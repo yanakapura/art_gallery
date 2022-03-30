@@ -7,6 +7,10 @@ const swiperMain = new Swiper(".main__slider", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    autoplay: {
+      delay: 3000,
+    },
   
     pagination: {
       el: "#swiper__main-pagination",
@@ -24,6 +28,9 @@ const swiperMain = new Swiper(".main__slider", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000,
     },
   
     slidesPerView: 1,
@@ -58,6 +65,10 @@ const swiperMain = new Swiper(".main__slider", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    autoplay: {
+      delay: 3000,
+    },
   
     pagination: {
       el: ".swiper-pagination",
@@ -75,6 +86,10 @@ const swiperMain = new Swiper(".main__slider", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    autoplay: {
+      delay: 3000,
+    },
   
     pagination: {
       el: ".swiper-pagination",
@@ -91,6 +106,10 @@ const swiperMain = new Swiper(".main__slider", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+
+    autoplay: {
+      delay: 3000,
     },
   
     pagination: {
@@ -114,7 +133,7 @@ const swiperMain = new Swiper(".main__slider", {
         slidesPerGroup: 2,
       },
       // when window width is >= 768px
-      768: {
+      630: {
         slidesPerView: 3,
         slidesPerGroup: 3,
       },
