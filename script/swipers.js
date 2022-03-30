@@ -26,8 +26,27 @@ const swiperMain = new Swiper(".main__slider", {
       prevEl: ".swiper-button-prev",
     },
   
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 5,
+
+    breakpoints: {
+      // when window width is >= 375px
+      375: {
+        slidesPerView:1,
+      },
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 992px
+      980: {
+        slidesPerView: 4,
+      }
+    }
   });
   
   const swiperTestimonial = new Swiper(".swiper-testimonial", {
@@ -75,11 +94,34 @@ const swiperMain = new Swiper(".main__slider", {
     },
   
     pagination: {
-      el: ".swiper-pagination",
+      el: "#swiper-shop__pagination",
       clickable: true,
     },
   
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 3,
+
+    breakpoints: {
+      // when window width is >= 375px
+      // 375: {
+      //   slidesPerView:1,
+      //   slidesPerGroup: 1
+      // },
+      // when window width is >= 576px
+      375: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      // when window width is >= 640px
+      992: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      }
+    }
   });

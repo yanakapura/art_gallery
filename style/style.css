@@ -10,7 +10,6 @@ html {
   text-decoration: none;
 }
 
-
 p::-moz-selection {
   color: white;
   background: #c9ab81;
@@ -66,6 +65,101 @@ p {
   position: absolute;
 }
 
+.header-sm {
+  height: 6rem;
+  background-color: #fff;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  display: none;
+}
+.header-sm > div {
+  padding: 0 3.5rem;
+}
+.menu span {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 3rem;
+  background-color: #c9ab81;
+  margin: 1rem 0;
+}
+
+.menu__wrapper {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  height: 0;
+  width: 100%;
+  transition: 1s ease;
+  overflow: hidden;
+}
+
+.menu__wrapper-active {
+  height: 36rem;
+}
+
+.menu__wrapper a {
+  color: #000;
+}
+
+.menu__ul {
+  list-style-type: none;
+  flex-direction: column;
+  text-transform: uppercase;
+  align-items: flex-start;
+}
+
+.menu__ul li {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  position: relative;
+}
+
+.menu__ul li::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+}
+
+.menu__link {
+  align-self: center;
+  width: 100%;
+}
+
+.menu__arrows {
+  height: 2rem;
+  width: 3rem;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 50%;
+  margin-right: 1rem;
+}
+
+.menu__arrows::before,
+.menu__arrows::after {
+  content: "";
+  height: 1px;
+  width: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.menu__arrows::before {
+  transform: rotate(45deg) translate(.5rem, -.5rem);
+}
+.menu__arrows::after {
+  transform: rotate(-45deg) translate(0px, 1rem);
+}
+
 .main,
 .header {
   z-index: 10;
@@ -109,7 +203,7 @@ p {
 
 .nav__link {
   margin: 0 2rem;
-  padding-bottom: .6rem;
+  padding-bottom: 0.6rem;
 
   transition: 0.5s;
   position: relative;
@@ -121,7 +215,7 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: .1rem;
+  height: 0.1rem;
   background-color: #c9ab81;
   transform-origin: bottom right;
   transition: transform 0.4s ease-out;
@@ -136,8 +230,8 @@ p {
 .header .btn,
 .main .btn {
   background-color: transparent;
-  height: 5rem;
-  width: 15.5rem;
+  /* height: 5rem; */
+  width: fit-content;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
@@ -396,7 +490,7 @@ p {
 .section-5__text .title {
   margin: 0;
   font-size: 4rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 .section-2 .title::before,
@@ -436,7 +530,7 @@ p {
 
 .swiper-events__slide {
   height: 60rem;
-  width: 250px;
+  width: 25rem;
   position: relative;
 }
 
@@ -489,7 +583,7 @@ p {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2.2rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   margin-bottom: 3rem;
 }
 
@@ -555,7 +649,7 @@ p {
 .section-4__label h3 {
   margin-left: 5rem;
   font-weight: 400;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 .section-4__label p {
@@ -689,13 +783,13 @@ p {
   border-radius: 50%;
   background-color: black;
   position: absolute;
-  left: -.5rem;
+  left: -0.5rem;
   top: 10rem;
 }
 
 .circle-left {
   left: unset;
-  right: -.5rem;
+  right: -0.5rem;
 }
 
 .circle__line {
@@ -704,13 +798,13 @@ p {
   width: 10rem;
   background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  left: .5rem;
-  top: .5rem;
+  left: 0.5rem;
+  top: 0.5rem;
 }
 
 .circle__line-left {
   left: unset;
-  right: .5rem;
+  right: 0.5rem;
 }
 
 .circle__year {
@@ -835,7 +929,7 @@ p {
 .section-form__text h2 {
   margin: 0;
   font-size: 4rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 .section-7__form,
@@ -848,7 +942,7 @@ p {
 .section-form__form input {
   width: 100%;
   margin-bottom: 4.8rem;
-  padding: .3rem .7rem;
+  padding: 0.3rem 0.7rem;
   font-size: 1.6rem;
   font-family: "Alegreya Sans", sans-serif;
   border: none;
@@ -861,7 +955,7 @@ p {
 /* ////////////////////////////////// */
 /* /////////// Section 8 ////////////// */
 
-.section-8{
+.section-8 {
   height: 100rem;
 }
 
@@ -935,7 +1029,7 @@ p {
 }
 
 .blog__info-wrapper span {
-  bottom: .9rem;
+  bottom: 0.9rem;
 }
 
 /* ///////////////////////////////////////// */
@@ -971,6 +1065,7 @@ p {
   width: 25rem;
   overflow: hidden;
   position: relative;
+  margin: auto;
 }
 
 .product__cart {
@@ -1011,13 +1106,14 @@ p {
 }
 
 .product__rating {
-  margin: .5rem 0 1.5rem;
+  margin: 0.5rem 0 1.5rem;
   font-size: 1.3rem;
 }
 
 #swiper-shop__pagination {
   position: absolute;
   bottom: 10%;
+  text-align: center;
 }
 
 /* ////////////////////////////////////////////// */
