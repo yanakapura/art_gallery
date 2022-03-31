@@ -13,9 +13,12 @@
     />
     <link rel="icon" href="../img/favicon.jpg" type="image/png" />
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/animation.css" />
     <link rel="stylesheet" href="../style/style-about.css" />
     <link rel="stylesheet" href="../style/style-contacts.css" />
+    <link rel="stylesheet" href="../style/adaptive.css" />
+    <link rel="stylesheet" href="../style/adaptive-about.css" />
+    <link rel="stylesheet" href="../style/adaptive-contact.css" />
+    <link rel="stylesheet" href="../style/animation.css" />
     <title>Document</title>
   </head>
   <body>
@@ -51,24 +54,67 @@
           </svg>
         </button>
         <div class="header__icons flex-center">
-          <div class="header__icon"><i class="fa-solid fa-cart-shopping"></i></div>
-          <div class="header__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="header__icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="header__icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header-sm flex">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="logo__image" src="/img/logo-dark.png" alt="logo" />
+          </a>
+        </div>
+        <div class="menu">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu__wrapper">
+          <ul class="menu__ul flex-center">
+            <li>
+              <a href="../pages/about.html" class="menu__link">about us</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#events" class="menu__link">events</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#history" class="menu__link">history</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#blog" class="menu__link">blog</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#shop" class="menu__link">shop</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="../pages/contacts.html" class="menu__link">contacts</a>
+              <div class="menu__arrows"></div>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main">
+      <a href="#main" class="button-up js-scroll opacity-to-1"></a>
       <section class="page-title flex-center">
-        <div class="page-title__image">
-        </div>
+        <div class="page-title__image"></div>
         <div class="section__title">
           <h1 class="title js-scroll top">Contact us</h1>
         </div>
       </section>
 
-      <section class="section-contacts">
+      <section class="section-contacts flex-center">
         <div class="section__title">
-          <h3 class="js-scroll top-sm">contact form</h3>
+          <h3 class="js-scroll top-sm">Contact form</h3>
           <h2 class="title js-scroll top">get to us</h2>
           <p class="section__paragraph js-scroll top">
             <span>673 12 Constitution Lane Massillion</span>
@@ -94,6 +140,7 @@
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
+            id="map-contact"
           ></iframe>
         </div>
       </section>
@@ -182,6 +229,7 @@
       crossorigin="anonymous"
     ></script>
     <
+    <script src="../script/script.js"></script>
     <script src="../script/scroll-animation.js"></script>
   </body>
 </html>

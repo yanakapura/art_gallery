@@ -61,7 +61,7 @@ const products = [
     code: "007",
     oldPrice: "",
     price: "9$",
-    rating: 5,
+    rating: 2,
     category: "Souvenirs",
     image: "img/shop/shop-img-7-768x768.jpg"
   },
@@ -138,7 +138,7 @@ function rating(prod) {
 
 
 function loadProducts() {
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < products.length; i++) {
     const newSlide = document.createElement("div");
     newSlide.classList.add("swiper-slide");
     newSlide.classList.add("swiper-shop__slide");

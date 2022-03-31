@@ -165,6 +165,34 @@ p {
   z-index: 10;
 }
 
+.button-up {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: #272727;
+  cursor: pointer;
+}
+
+.button-up::before,
+.button-up::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 1px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.button-up::before {
+  transform: translate(2.6rem, 3rem) rotate(45deg);
+}
+.button-up::after {
+  transform: translate(.875rem, 3rem) rotate(-45deg);
+}
+
+
 .main {
   margin-bottom: 44rem;
 }
@@ -230,7 +258,7 @@ p {
 .header .btn,
 .main .btn {
   background-color: transparent;
-  /* height: 5rem; */
+  height: 6rem;
   width: fit-content;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
@@ -538,6 +566,7 @@ p {
   height: 40rem;
   width: 25rem;
   overflow: hidden;
+  margin: auto;
 }
 
 .owl__image img {
@@ -565,7 +594,7 @@ p {
   width: 80%;
   position: absolute;
   bottom: 10rem;
-  left: -1px;
+  left: .5rem;
 
   background-color: #fff;
 }
@@ -629,7 +658,7 @@ p {
   height: 70rem;
   background: url(/img/h1-bg-img-1.jpg) no-repeat;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
 }
 
 .section-4__label {
@@ -828,7 +857,11 @@ p {
   height: 40rem;
   align-items: start;
 
+}
+
+.section-6__wrapper {
   position: relative;
+  height: 40rem;
 }
 
 .swiper-testimonial,
@@ -1035,10 +1068,11 @@ p {
 /* ///////////////////////////////////////// */
 /* /////////// Section 10. Shop /////////// */
 
-.section-10 {
-  height: 90rem;
+.section-10__wrapper {
   flex-direction: column;
+  height: 90rem;
   position: relative;
+  width: 100%;
 }
 
 .swiper-shop {
