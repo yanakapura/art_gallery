@@ -1,0 +1,173 @@
+/* // Большие девайсы (большие десктопы, >= 1200px) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+}
+
+/* // Большие девайсы (большие десктопы, >= 992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .section-tabs__title h3 {
+    font-size: 25px;
+    padding: 15px;
+  }
+  #input-number,
+  .input-arrows {
+    height: 6rem;
+  }
+  .input-arrows .fa-angle-down {
+    padding-top: 0.7rem;
+  }
+}
+
+/* // Средние девайсы («таблетки», >= 768px)  */
+/* @media (min-width: 768px) and (max-width: 991.98px) { */
+@media (max-width: 991.98px) {
+  .section-product__container {
+    flex-direction: column;
+    height: 170rem;
+  }
+  .section-product__container > div {
+    width: 100%;
+  }
+  #input-number,
+  .input-arrows {
+    height: 6rem;
+  }
+  .input-arrows .fa-angle-down {
+    padding-top: 0.7rem;
+  }
+  .section-product__description {
+    width: 100%;
+  }
+  .section-tabs__title h3 {
+    font-size: 22px;
+    padding: 15px;
+  }
+  .section-tabs__container {
+    width: 80%;
+  }
+}
+
+/* // Малые девайсы («ландшафтные», >= 575px) */
+/* @media (min-width: 576px) and (max-width: 767.98px) { */
+@media (max-width: 767.98px) {
+  .section-product__container {
+    height: 160rem;
+  }
+  .section-tabs__title h3 {
+    font-size: 20px;
+    padding: 10px;
+  }
+  #input-number,
+  .input-arrows {
+    height: 6.5rem;
+  }
+  .input-arrows .fa-angle-down {
+    padding-top: 1rem;
+  }
+  .characteristic__title,
+  .review__title {
+    font-size: 2rem;
+  }
+  .review__form .review__form-label {
+    font-size: 1.5rem;
+  }
+  .review__form span {
+    font-size: 1.8rem;
+  }
+  .review__form .review__rating {
+    font-size: 1.5rem;
+  }
+  .characteristic__item {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/* // Экстрамалые девайсы («портретные телефоны», < 576px) */
+@media (max-width: 575.98px) {
+  .section-product__container {
+    height: 155rem;
+  }
+
+  .section-tabs__title h3 {
+    font-size: 13.5px;
+    padding: 4px;
+  }
+  #input-number,
+  .input-arrows {
+    height: 8rem;
+    width: 10rem;
+    font-size: 2rem;
+  }
+  .input-arrows {
+    width: 4rem;
+    left: 6rem;
+  }
+  .input-arrows i {
+    padding-top: 1.2rem;
+    font-size: 1.5rem;
+  }
+  .input-arrows .fa-angle-down {
+    padding-top: 1.5rem;
+  }
+  .characteristic__title,
+  .review__title,
+  .review__username,
+  .meta__title {
+    font-size: 2.3rem;
+  }
+  .review__text,
+  .meta__item a,
+  .meta__item span {
+    font-size: 2.1rem;
+  }
+  .review__form .review__form-label,
+  .review__form input,
+  .review__form .review__rating,
+  .review__form textarea {
+    font-size: 1.8rem;
+  }
+  .review__form span {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .section-tabs__title h3 {
+    font-size: 10px;
+    padding: 4px;
+  }
+  #input-number,
+  .input-arrows {
+    height: 11.2rem;
+    width: 13rem;
+    font-size: 3rem;
+  }
+  .input-arrows {
+    width: 5rem;
+    left: 8rem;
+  }
+  .input-arrows i {
+    padding-top: 2rem;
+    font-size: 2.2rem;
+  }
+  .characteristic__title,
+  .review__title,
+  .review__username,
+  .meta__title {
+    font-size: 2.7rem;
+  }
+  .review__text,
+  .meta__item a,
+  .meta__item span,
+  .tab-description {
+    font-size: 2.5rem;
+  }
+  .review__form .review__form-label,
+  .review__form input,
+  .review__form .review__rating,
+  .review__form textarea,
+  .review__form span,
+  .btn__text {
+    font-size: 2.4rem;
+  }
+}

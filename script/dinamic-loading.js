@@ -9,7 +9,7 @@ const products = [
     price: "17$",
     rating: 3,
     category: "Brochure",
-    image: "img/shop/shop-img-1-768x768.jpg"
+    image: "/img/shop/shop-img--1-768x768.jpg",
   },
   {
     name: "degas book",
@@ -18,7 +18,7 @@ const products = [
     price: "12$",
     rating: 4,
     category: "Souvenirs",
-    image: "img/shop/shop-img-2-768x768.jpg"
+    image: "/img/shop/shop-img--2-768x768.jpg",
   },
   {
     name: "linen bag",
@@ -27,7 +27,7 @@ const products = [
     price: "29$",
     rating: 0,
     category: "Lifestyle",
-    image: "img/shop/shop-img-3-768x768.jpg"
+    image: "/img/shop/shop-img--3-768x768.jpg",
   },
   {
     name: "brochure",
@@ -36,7 +36,7 @@ const products = [
     price: "15$",
     rating: 2,
     category: "Brochure",
-    image: "img/shop/shop-img-4-768x768.jpg"
+    image: "/img/shop/shop-img--4-768x768.jpg",
   },
   {
     name: "small rug",
@@ -45,7 +45,7 @@ const products = [
     price: "57$",
     rating: 4,
     category: "Museum",
-    image: "img/shop/shop-img-5-768x768.jpg"
+    image: "/img/shop/shop-img--5-768x768.jpg",
   },
   {
     name: "sculpture",
@@ -54,7 +54,7 @@ const products = [
     price: "25$",
     rating: 3,
     category: "Lifestyle",
-    image: "img/shop/shop-img-6-768x768.jpg"
+    image: "/img/shop/shop-img--6-768x768.jpg",
   },
   {
     name: "mug",
@@ -63,7 +63,7 @@ const products = [
     price: "9$",
     rating: 2,
     category: "Souvenirs",
-    image: "img/shop/shop-img-7-768x768.jpg"
+    image: "/img/shop/shop-img--7-768x768.jpg",
   },
   {
     name: "winslow bag",
@@ -72,7 +72,7 @@ const products = [
     price: "17$",
     rating: 3,
     category: "Lifestyle",
-    image: "img/shop/shop-img-8-768x768.jpg"
+    image: "/img/shop/shop-img--8-768x768.jpg",
   },
   {
     name: "phone case",
@@ -81,7 +81,7 @@ const products = [
     price: "15$",
     rating: 2,
     category: "Museum",
-    image: "img/shop/shop-img-9-768x768.jpg"
+    image: "/img/shop/shop-img--9-768x768.jpg",
   },
   {
     name: "ALLEN CARDS",
@@ -90,7 +90,7 @@ const products = [
     price: "15$",
     rating: 4,
     category: "Brochure",
-    image: "img/shop/shop-img-10-768x768.jpg"
+    image: "/img/shop/shop-img-10-768x768.jpg",
   },
   {
     name: "art",
@@ -99,10 +99,9 @@ const products = [
     price: "950$",
     rating: 5,
     category: "Museum",
-    image: "img/shop/shop-img-11-768x768.jpg"
+    image: "/img/shop/shop-img-11-768x768.jpg",
   },
-]
-
+];
 
 ////////////////////////////////////////////
 /////////////// FUNCTIONS ////////////////
@@ -130,12 +129,14 @@ function loadEvents() {
 
 function rating(prod) {
   let html = "";
-  for(let i=0; i<prod.rating;i++) {
+  for (let i = 0; i < prod.rating; i++) {
     html += "1";
   }
-  return html.padEnd(5, "0").replaceAll("1",`<i class="fa-solid fa-star"></i>`).replaceAll("0",`<i class="fa-regular fa-star"></i>`)
+  return html
+    .padEnd(5, "0")
+    .replaceAll("1", `<i class="fa-solid fa-star"></i>`)
+    .replaceAll("0", `<i class="fa-regular fa-star"></i>`);
 }
-
 
 function loadProducts() {
   for (let i = 0; i < products.length; i++) {
@@ -148,7 +149,7 @@ function loadProducts() {
     <button class="btn">
           <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
             <rect class="shape" height="50" width="155" />
-            <div class="btn__text">Add to cart</div>
+            <div class="btn__text flex-center">Add to cart</div>
           </svg>
         </button>
         </div>
@@ -175,7 +176,7 @@ function loadMainSlider() {
       <button class="btn js-scroll top">
         <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
           <rect class="shape" height="50" width="155" />
-          <div class="btn__text">View more</div>
+          <div class="btn__text flex-center">View more</div>
         </svg>
       </button>
     </div>`;
@@ -202,8 +203,40 @@ function loadTestimonial() {
   }
 }
 
-loadEvents();
-loadProducts();
-loadMainSlider();
-loadTestimonial();
+function loadProductPage() {
+  const i = localStorage.getItem("currentProduct") - 1;
+  console.log(i);
+  console.log(products[i]);
+  document.querySelector("#product-page__image").src = products[i].image;
+  document.querySelector("#product-page__title").textContent = products[i].name;
+  document.querySelector(".section-product__rating").innerHTML = rating(products[i])
+  document.querySelector(".section-product__price").textContent = products[i].price;
+  document.querySelector(".meta__sku").textContent = products[i].code;
+  document.querySelector(".meta__category").textContent = products[i].category;
+}
 
+
+
+  if(window.location.pathname.includes("index")) {
+    loadEvents();
+    loadProducts();
+    loadMainSlider();
+    loadTestimonial();
+
+    document
+  .querySelector(".swiper-shop__wrapper")
+  .addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn__text")) {
+    }
+    const currentEl = e.target.offsetParent.offsetParent.children[0].src
+      .slice(-15)
+      .slice(0, 3)
+      .replaceAll("-", "");
+      localStorage.setItem("currentProduct", currentEl);
+    console.log(currentEl);
+      window.location.href = "../pages/product-page.html";
+  });
+  } else if (window.location.pathname.includes("product")) {
+
+    loadProductPage();
+  }

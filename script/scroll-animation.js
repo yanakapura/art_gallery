@@ -31,4 +31,4 @@ document.querySelectorAll(".main__slider-arrow").forEach((arrow) => {
   });
 });
 
-document.querySelector(".product-image").addEventListener("mouseover", handleScrollAnimation);
+document.querySelector(".product__image").addEventListener("mouseover", handleScrollAnimation);

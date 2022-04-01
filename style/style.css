@@ -258,8 +258,8 @@ p {
 .header .btn,
 .main .btn {
   background-color: transparent;
-  height: 6rem;
-  width: fit-content;
+  height: 50px;
+  width: auto;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
@@ -276,6 +276,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.1em;
 }
+
 
 .header__icon {
   width: 100%;

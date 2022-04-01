@@ -9,9 +9,11 @@
   transition: all 2s;
 }
 .btn__text {
-  top: -3.5rem;
+  height: 100%;
+  top:-100%;
   position: relative;
 }
+
 .btn:hover .shape {
   stroke-width: 2px;
   stroke-dasharray: 425 25;

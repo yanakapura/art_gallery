@@ -1,0 +1,469 @@
+/* // Большие девайсы (большие десктопы, >= 1200px) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  html {
+    font-size: 52.5%;
+  }
+  .shape {
+    stroke-dashoffset: 150;
+    stroke-dasharray: 225 15;
+  }
+
+  .btn:hover .shape {
+    stroke-dasharray: 405 15;
+    stroke-dashoffset: -90;
+  }
+  .header .btn,
+  .main .btn {
+    height: 40px;
+  }
+}
+
+/* // Большие девайсы (большие десктопы, >= 992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  html {
+    font-size: 42.5%;
+  }
+  .main__slider-slide img {
+    height: 115%;
+    width: auto;
+  }
+  .shape {
+    stroke-dashoffset: 150;
+    stroke-dasharray: 225 15;
+  }
+
+  .btn:hover .shape {
+    stroke-dasharray: 405 15;
+    stroke-dashoffset: -90;
+  }
+  .header .btn,
+  .main .btn {
+    height: 40px;
+  }
+}
+
+/* // Средние девайсы («таблетки», >= 768px)  */
+/* @media (min-width: 768px) and (max-width: 991.98px) { */
+@media (max-width: 991.98px) {
+  html {
+    font-size: 52.5%;
+  }
+  .header-left,
+  .header-right,
+  .main__slider-arrows,
+  .title::before,
+  .title::after,
+  .events-owl__arrows,
+  .circle__line,
+  .time-line,
+  .swiper-shop__arrows,
+  .swiper-testimonial__arrows {
+    display: none;
+  }
+  .row {
+    width: 95%;
+  }
+  .header {
+    position: relative;
+    height: auto;
+    padding: 0;
+  }
+  .header-sm {
+    display: flex;
+  }
+
+  .main__slider-slide img {
+    height: 115%;
+    width: auto;
+  }
+
+  .section-1 {
+    height: 200rem;
+    padding-top: 6rem;
+  }
+  .section-1__grid {
+    margin: 5rem;
+    gap: 0;
+  }
+  .section-1__grid,
+  .main .section-2,
+  .section-5__grid {
+    grid-template-columns: 1fr;
+  }
+  .section-1__grid-item:not(:nth-child(2)) {
+    height: 30rem;
+  }
+  .section-1__grid-item:last-child {
+    margin-top: 6rem;
+  }
+  .section-1__image {
+    margin: 0 auto;
+    height: 100%;
+    width: 80rem;
+  }
+  .section-2__item {
+    height: 60rem;
+  }
+  .slider {
+    width: 85%;
+  }
+
+  .section-5 {
+    height: 430rem;
+  }
+  .section-5__grid {
+    padding-top: 10rem;
+    grid-auto-rows: unset;
+    gap: 10rem;
+  }
+  .section-5__image,
+  .section-5__image img {
+    height: 80rem;
+  }
+  .section-5__image,
+  .section-5__image img {
+    margin: 0 auto;
+    width: 57rem;
+  }
+  .text-center,
+  .text-center h3,
+  .text-center h2,
+  .section-5__text-left .text-center,
+  .section-8__text-col {
+    width: 70rem;
+    padding: 0;
+    text-align: center;
+  }
+  .section-5__text-left {
+    grid-row: 4;
+  }
+  .circle__year,
+  .circle {
+    position: relative;
+  }
+  .circle {
+    height: 1rem;
+    width: 70rem;
+    text-align: center;
+    top: unset;
+    left: unset;
+    background-color: transparent;
+  }
+  .circle__year,
+  .section-7__form,
+  .section-11__form,
+  .section-7__text {
+    left: unset;
+    right: unset;
+    padding: 0;
+  }
+  .section-7__label,
+  .section-8__text,
+  .section-11__label {
+    flex-direction: column;
+    height: 70rem;
+  }
+  .section-7__text {
+    padding-bottom: 6rem;
+  }
+  .section-7__label > div,
+  .section-11__label > div,
+  .section-form__container > div {
+    width: 60%;
+  }
+  p.circle__year,
+  .section-7__form .btn {
+    margin-top: 0;
+    width: auto;
+  }
+  .section-8 {
+    height: 110rem;
+  }
+  .section-8__wrapper {
+    height: auto;
+  }
+  .section-8__text {
+    align-items: center;
+    height: 50rem;
+  }
+  .section-8__text-col {
+    text-align: justify;
+  }
+  .section-8__text-col:nth-of-type(2) {
+    padding: 0;
+  }
+  .section-9__wrapper {
+    justify-content: space-evenly;
+  }
+  .blog__image,
+  .blog__info {
+    width: 25rem;
+  }
+  .blog__info-wrapper {
+    width: 27rem;
+  }
+  .section-11__text {
+    padding: 0 6rem 0 0rem;
+  }
+  .header .btn,
+  .main .btn {
+    font-size: 1.7rem;
+  }
+}
+
+/* // Малые девайсы («ландшафтные», >= 575px) */
+/* @media (min-width: 576px) and (max-width: 767.98px) { */
+@media (max-width: 767.98px) {
+  html {
+    font-size: 47.5%;
+  }
+  body {
+    font-size: 2rem;
+  }
+  span {
+    font-size: 2.3rem;
+  }
+  .section-1 {
+    height: 220rem;
+  }
+  .section-1__grid {
+    margin: 5rem;
+  }
+  .section-1__grid-item:not(:nth-child(2)) {
+    height: 40rem;
+  }
+  .section-1__grid-item:last-child {
+    margin-top: 5rem;
+  }
+
+  .owl__image {
+    height: 49rem;
+    width: 30rem;
+  }
+
+  .owl__image img {
+    width: 100%;
+    height: 49rem;
+  }
+
+  .owl__info {
+    width: 65%;
+  }
+  .section-5 {
+    height: 450rem;
+  }
+  .main .section-9 {
+    height: 170rem;
+  }
+  .section-9__wrapper {
+    height: 150rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 7%;
+  }
+  .blog__image,
+  .blog__info {
+    width: 30rem;
+  }
+  .blog__info-wrapper {
+    width: 33rem;
+  }
+  .section-7__label > div,
+  .section-11__label > div,
+  .section-form__container > div {
+    width: 70%;
+  }
+  .section-11__label {
+    width: 95%;
+  }
+
+  .footer {
+    height: 65rem;
+    display: flex;
+  }
+  .footer__grid {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+  .footer__inner {
+    align-self: center;
+  }
+  .footer__grid,
+  .footer__inner {
+    height: 50rem;
+  }
+  .main {
+    margin-bottom: 65rem;
+  }
+}
+
+/* // Экстрамалые девайсы («портретные телефоны», < 576px) */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 37.5%;
+  }
+
+  .events-owl {
+    width: 72%;
+  }
+  .owl__image {
+    height: 69rem;
+    width: 40rem;
+  }
+
+  .owl__image img {
+    width: 100%;
+    height: 69rem;
+  }
+  .owl__info span,
+  .blog__info-wrapper span {
+    bottom: 3.7rem;
+  }
+  .owl__info {
+    bottom: -0.2rem;
+    width: 30rem;
+  }
+  .section__paragraph,
+  .section__paragraph span {
+    max-width: 90%;
+  }
+  .section-5 {
+    height: 470rem;
+  }
+  .section-5__image,
+  .section-5__image img {
+    width: 56rem;
+  }
+  .text-center,
+  .text-center h3,
+  .text-center h2,
+  .section-5__text-left .text-center,
+  .section-8__text-col {
+    width: 60rem;
+  }
+  .circle {
+    width: auto;
+  }
+  .swiper-testimonial,
+  .swiper-testimonial__arrows,
+  .section-testimonial__swiper {
+    width: 60rem;
+  }
+  .section-8__text {
+    height: 55rem;
+  }
+  .section-8__image img {
+    height: 100%;
+    width: auto;
+  }
+  .blog__image,
+  .blog__info {
+    width: 26rem;
+  }
+  .blog__info-wrapper {
+    width: 27rem;
+  }
+  .section-7__label > div,
+  .section-11__label > div,
+  .section-form__container > div {
+    width: 90%;
+  }
+  #swiper-shop__pagination {
+    bottom: 5%;
+    transform: scale(0.5);
+  }
+  .section-9 {
+    padding-top: 5rem;
+  }
+  .section-9 .title {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 27.5%;
+  }
+  body {
+    font-size: 2.3rem;
+  }
+  span {
+    font-size: 2.6rem;
+  }
+  .btn__text {
+    font-size: 2.5rem;
+  }
+  .section-1 {
+    height: 240rem;
+  }
+  .section-1__grid-item:not(:nth-child(2)) {
+    height: 45rem;
+  }
+  .section-2__item {
+    height: 70rem;
+    padding-bottom: 5rem;
+  }
+  .section-5 {
+    height: 500rem;
+  }
+  .section-6 {
+    height: 55rem;
+  }
+  .swiper-testimonial,
+  .swiper-testimonial__arrows,
+  .section-testimonial__swiper {
+    height: 40rem;
+  }
+  #swiper-testimonial__pagination {
+    transform: scale(0.5);
+    bottom: -3rem;
+  }
+  .section-7__label > div {
+    margin: 0 auto;
+  }
+  .section-7__text {
+    height: 40rem;
+  }
+  .section-7__form {
+    height: 30rem;
+  }
+  .section-8 {
+    height: 120rem;
+  }
+  .section-8__text {
+    height: 70rem;
+  }
+  .main .section-9 {
+    height: 270rem;
+    display: block;
+    padding-top: 7rem;
+  }
+  .section-9__wrapper {
+    grid-template-columns: 1fr;
+    gap: 10rem;
+    margin: auto;
+    height: auto;
+  }
+  .blog__item {
+    height: 70rem;
+    width: 45rem;
+    margin: auto;
+  }
+  .blog__info-wrapper {
+    bottom: 0%;
+  }
+  .blog__image,
+  .blog__info {
+    width: 45rem;
+  }
+  .section-7__label,
+  .section-11__label {
+    height: 80rem;
+    justify-content: center;
+  }
+  .section-11__label > div {
+    margin: 0 auto;
+    height: 35rem;
+  }
+}

@@ -1,0 +1,325 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=EB+Garamond&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="../img/favicon.jpg" type="image/png" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/pages/style-about.css" />
+    <link rel="stylesheet" href="../style/pages/style-product.css" />
+    <link rel="stylesheet" href="../style/adaptive/adaptive.css" />
+    <link rel="stylesheet" href="../style/adaptive/adaptive-product.css" />
+    <link rel="stylesheet" href="../style/animation.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header flex" id="header">
+      <div class="header-left flex-center">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="logo__image" src="/img/logo-dark.png" alt="logo"
+          /></a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__ul flex-center">
+            <li>
+              <a href="../pages/about.html" class="nav__link">about us</a>
+            </li>
+            <li><a href="../index.html#events" class="nav__link">events</a></li>
+            <li>
+              <a href="../index.html#history" class="nav__link">history</a>
+            </li>
+            <li><a href="../index.html#blog" class="nav__link">blog</a></li>
+            <li><a href="../index.html#shop" class="nav__link">shop</a></li>
+            <li>
+              <a href="../pages/contacts.html" class="nav__link">contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right flex-center">
+        <div class="header__icons flex-center">
+          <div class="header__icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="header__icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header-sm flex">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="logo__image" src="/img/logo-dark.png" alt="logo" />
+          </a>
+        </div>
+        <div class="menu">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu__wrapper">
+          <ul class="menu__ul flex-center">
+            <li>
+              <a href="../pages/about.html" class="menu__link">about us</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#events" class="menu__link">events</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#history" class="menu__link">history</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#blog" class="menu__link">blog</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#shop" class="menu__link">shop</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="../pages/contacts.html" class="menu__link">contacts</a>
+              <div class="menu__arrows"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <a href="#header" class="button-up js-scroll opacity-to-1"></a>
+      <section class="page-title flex-center">
+        <div class="page-title__image"></div>
+        <div class="section__title">
+          <h1 class="title js-scroll top">Shop</h1>
+        </div>
+      </section>
+
+      <section class="section-product">
+        <div class="section-product__container flex">
+          <div class="section-product__image">
+            <img id="product-page__image" src="" alt="" />
+          </div>
+          <div class="section-product__info">
+            <h2 class="title js-scroll top" id="product-page__title"></h2>
+            <div class="section-product__rating product__rating"></div>
+            <!-- <p class="section-product__rating-details">(1 customer review)</p> -->
+            <div class="section-product__price product__price">19$</div>
+            <div class="section-product__description">
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                inventore facilis sit quasi? Natus repudiandae illum, inventore
+                doloremque nostrum perferendis, iusto laborum quia labore minima
+                tempore, nemo consequatur ut atque?</span
+              >
+            </div>
+            <div class="section-product__form">
+              <form action="" class="flex">
+                <input type="number" id="input-number" name="" min="1" max="100" />
+                <span class="input-arrows">
+                  <i class="fa-solid fa-angle-up" data-input="plus"></i>
+                  <i class="fa-solid fa-angle-down" data-input="minus"></i>
+                </span>
+                <button class="btn" type="submit">
+                  <svg
+                    height="50"
+                    width="155"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect class="shape" height="50" width="155" />
+                    <div class="btn__text flex-center">Add to cart</div>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="section-product__meta meta">
+              <ul class="meta__ul">
+                <li class="meta__item">
+                  <h4 class="meta__title">sku:</h4>
+                  <span class="meta__sku"></span>
+                </li>
+                <li class="meta__item">
+                  <h4 class="meta__title">Category:</h4>
+                  <a href="" class="meta__category"></a>
+                </li>
+                <li class="meta__item">
+                  <h4 class="meta__title">Tags:</h4>
+                  <a href="" class="meta__tags">Art</a>,
+                  <a href="" class="meta__tags">Books</a>,
+                  <a href="" class="meta__tags">Editions</a>
+                </li>
+                <li class="meta__item">
+                  <h4 class="meta__title">Share:</h4>
+                  <a href="">Facebook</a>
+                  <a href="">Twitter</a>
+                  <a href="">Pinterest</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-tabs flex-center">
+        <ul class="section-tabs__titles flex-center">
+          <li class="section-tabs__title" ><h3 data-tab="1">Description</h3></li>
+          <li class="section-tabs__title" ><h3 data-tab="2">Additional information</h3></li>
+          <li class="section-tabs__title" ><h3 data-tab="3">Reviews</h3></li>
+          <li class="section-tabs__line">
+             <div class="section-tabs__line-active"></div> 
+          </li>
+        </ul>
+        <div class="section-tabs__container">
+        <div class="section-tabs__tab section-tabs__tab-active tab-description " data-tab="1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, totam atque, labore a soluta aliquam tenetur dolorum ad dolor quibusdam distinctio deserunt expedita cupiditate. Minima, quia fugit laborum voluptatibus temporibus hic quisquam saepe soluta magni!
+        </div>
+        <div class="section-tabs__tab tab-info" data-tab="2">
+          <ul class="characteristic">
+            <li class="characteristic__item">
+              <h5 class="characteristic__title">Weight</h5>
+              <span>2 kg</span>
+            </li>
+            <li class="characteristic__item">
+              <h5 class="characteristic__title">Demensions</h5>
+              <span>20 * 10 * 5 cm</span>
+            </li>
+          </ul>
+        </div>
+        <div class="section-tabs__tab tab-review review" data-tab="3">
+          <h3 class="review__title">2 reviews for winslow bag</h3>
+          <div class="review__reviews">
+          <div class="review__item flex">
+            <div class="review__image">
+              <img
+                src="/img/user/user-img-3-100x100.jpg"
+                alt=""
+                class="review__avatar"
+              />
+            </div>
+            <div class="review__container">
+              <div class="review__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <div class="review__user">
+                  <span class="review__username">Lilian Colden</span>
+                  <span class="review__date"> — September 18, 2019</span>
+              </div>
+              <div class="review__text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, non!
+              </div>
+            </div>
+          </div>
+          <div class="review__item flex">
+            <div class="review__image">
+              <img
+                src="/img/user/unknown.png"
+                alt=""
+                class="review__avatar"
+              />
+            </div>
+            <div class="review__container">
+              <div class="review__rating">
+                <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+              </div>
+              <div class="review__user">
+                  <span class="review__username">admin</span>
+                  <span class="review__date"> — October 3, 2019</span>
+              </div>
+              <div class="review__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eligendi cumque rerum sequi, labore sed id explicabo repellendus recusandae non.
+              </div>
+            </div>
+          </div>
+          <div class="review__form">
+            <h5 class="characteristic__title">Add your review</h5>
+            <span class="review__form-label">Your email address will not be published.  Required fields are marked*</span>
+            <span>Your rating</span>
+            <div class="review__rating form__rating">
+                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+              </div>
+
+              <span>Your review*</span>
+              <textarea type="textarea" required></textarea>
+              <span>Name*</span>
+              <input type="text">
+              <span>Email*</span>
+              <input type="mail">
+              <input type="checkbox">
+              <label for="checkbox">Save my name, email, and website in this browser for the next time I comment.</label>
+              <button class="btn" type="submit">
+                <svg
+                  height="50"
+                  width="155"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect class="shape" height="50" width="155" />
+                  <div class="btn__text flex-center">Submit</div>
+                </svg>
+              </button>
+        </div>
+    </div>
+        </div>
+    </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner flex-center">
+        <div class="footer__grid row">
+          <div class="footer__item">
+            <div class="footer__logo">
+              <a href=""><img src="../img/logo-light.png" alt="" /></a>
+            </div>
+            <p id="footer-address">
+              <a href="">673 12 Constitution Lane Massillion</a>
+            </p>
+            <p>781-562-9355, 781-727-6090</p>
+            <p class="footer__license">© 2022 Museum All Rights Reserved</p>
+          </div>
+          <div class="footer__item">
+            <p>Museum info</p>
+            <p><a href="">Events & Shows</a></p>
+            <p><a href="">Exhibitions</a></p>
+            <p><a href="">News & Updates</a></p>
+            <p><a href="">Museum shop</a></p>
+          </div>
+          <div class="footer__item">
+            <p>Opening hours</p>
+            <p>Tue—Thu: 09:00—19:00</p>
+            <p>Fri—Sat: 09:00—17:00</p>
+            <p>Sun: 08:00—18:00</p>
+            <p>Mon: closed</p>
+          </div>
+          <div class="footer__item">
+            <p>Follow us</p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Twitter</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d84c4d6b5b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/dinamic-loading.js"></script>
+    <script src="../script/scroll-animation.js"></script>
+    <script src="../script/product.js"></script>
+  </body>
+</html>
