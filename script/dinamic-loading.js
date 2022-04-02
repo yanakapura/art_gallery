@@ -36,7 +36,7 @@ const products = [
     price: "17$",
     rating: 3,
     category: "Brochure",
-    image: "/img/shop/shop-img--1-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--1-768x768.jpg",
   },
   {
     name: "degas book",
@@ -45,7 +45,7 @@ const products = [
     price: "12$",
     rating: 4,
     category: "Souvenirs",
-    image: "/img/shop/shop-img--2-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--2-768x768.jpg",
   },
   {
     name: "linen bag",
@@ -54,7 +54,7 @@ const products = [
     price: "29$",
     rating: 0,
     category: "Lifestyle",
-    image: "/img/shop/shop-img--3-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--3-768x768.jpg",
   },
   {
     name: "brochure",
@@ -63,7 +63,7 @@ const products = [
     price: "15$",
     rating: 2,
     category: "Brochure",
-    image: "/img/shop/shop-img--4-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--4-768x768.jpg",
   },
   {
     name: "small rug",
@@ -72,7 +72,7 @@ const products = [
     price: "57$",
     rating: 4,
     category: "Museum",
-    image: "/img/shop/shop-img--5-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--5-768x768.jpg",
   },
   {
     name: "sculpture",
@@ -81,7 +81,7 @@ const products = [
     price: "25$",
     rating: 3,
     category: "Lifestyle",
-    image: "/img/shop/shop-img--6-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--6-768x768.jpg",
   },
   {
     name: "mug",
@@ -90,7 +90,7 @@ const products = [
     price: "9$",
     rating: 2,
     category: "Souvenirs",
-    image: "/img/shop/shop-img--7-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--7-768x768.jpg",
   },
   {
     name: "winslow bag",
@@ -99,7 +99,7 @@ const products = [
     price: "17$",
     rating: 3,
     category: "Lifestyle",
-    image: "/img/shop/shop-img--8-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--8-768x768.jpg",
   },
   {
     name: "phone case",
@@ -108,7 +108,7 @@ const products = [
     price: "15$",
     rating: 2,
     category: "Museum",
-    image: "/img/shop/shop-img--9-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--9-768x768.jpg",
   },
   {
     name: "ALLEN CARDS",
@@ -117,7 +117,7 @@ const products = [
     price: "15$",
     rating: 4,
     category: "Brochure",
-    image: "/img/shop/shop-img-10-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-10-768x768.jpg",
   },
   {
     name: "art",
@@ -126,7 +126,7 @@ const products = [
     price: "950$",
     rating: 5,
     category: "Museum",
-    image: "/img/shop/shop-img-11-768x768.jpg",
+    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-11-768x768.jpg",
   },
 ];
 
@@ -141,7 +141,7 @@ function loadMainSlider() {
     newSlide.classList.add("main__slider-slide");
     newSlide.innerHTML = `<img class="main-animation js-scroll ${
       i % 2 ? "mainSlide-to-right" : "mainSlide-to-left"
-    }" src="img/h1-rev-bg-img-${i + 1}.jpg" alt="slide-image-${i + 1}" />
+    }" src="https://yanakapura.github.io/art_gallery/img/h1-rev-bg-img-${i + 1}.jpg" alt="slide-image-${i + 1}" />
     <div class="main__slide-label section__title">
       <h3 class="main-animation js-scroll  top-sm">History of art department</h3>
       <h1 class="slide__title title main-animation js-scroll top">${
@@ -167,7 +167,7 @@ function loadEvents() {
       newSlide.classList.add("owl-bottom");
     }
     newSlide.innerHTML = `<div class="owl__image js-scroll img-animation">
-      <img src="img/show-slider-img-${i}.jpg" alt="owl-image-2" />
+      <img src="https://yanakapura.github.io/art_gallery/img/show-slider-img-${i}.jpg" alt="owl-image-2" />
     </div>
     <div class="owl__info js-scroll top">
       <p class="event__date">Mar 1 - Mar 3 2022</p>
@@ -270,7 +270,7 @@ if (window.location.pathname.includes("index")) {
         const currentEl = e.target.dataset.productCode;
         localStorage.setItem("currentProduct", currentEl);
         console.log();
-        window.location.href = "../pages/product-page.html";
+        window.location.href = "pages/product-page.html";
       }
     });
 } else if (window.location.pathname.includes("product")) {
