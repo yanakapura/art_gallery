@@ -3,11 +3,14 @@
   html {
     font-size: 52.5%;
   }
+  svg, rect {
+    width: 105;
+    height: 40;
+  }
   .shape {
     stroke-dashoffset: 150;
     stroke-dasharray: 225 15;
   }
-
   .btn:hover .shape {
     stroke-dasharray: 405 15;
     stroke-dashoffset: -90;
@@ -22,6 +25,10 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
   html {
     font-size: 42.5%;
+  }
+  svg, rect {
+    width: 105;
+    height: 40;
   }
   .main__slider-slide img {
     height: 115%;
@@ -252,6 +259,15 @@
   .section-5 {
     height: 450rem;
   }
+  svg, rect {
+    width: 130;
+  }
+  .shape {
+    stroke-dashoffset: 220;
+  }
+  .btn:hover .shape {
+    stroke-dashoffset: -105;
+  }
   .main .section-9 {
     height: 170rem;
   }
@@ -303,7 +319,17 @@
   html {
     font-size: 37.5%;
   }
-
+  svg, rect {
+    width: 100;
+  }
+  .shape {
+    stroke-dashoffset: 250;
+    stroke-dasharray: 320 20;
+  }
+  .btn:hover .shape {
+    stroke-dasharray: 425 20;
+    stroke-dashoffset: -90;
+  }
   .events-owl {
     width: 72%;
   }
@@ -366,7 +392,8 @@
   }
   .section-7__label > div,
   .section-11__label > div,
-  .section-form__container > div {
+  .section-form__container > div,
+  .section__title {
     width: 90%;
   }
   #swiper-shop__pagination {
@@ -391,6 +418,7 @@
   span {
     font-size: 2.6rem;
   }
+  
   .btn__text {
     font-size: 2.5rem;
   }
@@ -456,6 +484,23 @@
   .blog__image,
   .blog__info {
     width: 45rem;
+  }
+  .swiper-shop__slide {
+    height: 50rem;
+  }
+  .product__image {
+    height: 35rem;
+    width: 35rem;
+  }
+  .product__cart {
+    top: 4.5rem
+  }
+  .product__cart, .product__cart:hover .product__cart-wrapper {
+    height: 28rem;
+    width: 30rem;
+  }
+  .product__cart-wrapper {
+    width: 30rem;
   }
   .section-7__label,
   .section-11__label {

@@ -1,4 +1,10 @@
 const scrollElements = document.querySelectorAll(".js-scroll");
+const scrollElementsMain = [];
+scrollElements.forEach(el=>{
+  if(el.classList.contains("main-animation")) {
+    scrollElementsMain.push(el)
+  }
+});
 
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
@@ -14,8 +20,12 @@ const displayScrollElement = (element) => {
 }
 
 function handleScrollAnimation(removeScrolledClass = false) {
+  if (removeScrolledClass == true) {
+    scrollElementsMain.forEach((el) => {
+      el.classList.remove("scrolled")
+    });
+  }
   scrollElements.forEach((el) => {
-    if (removeScrolledClass == true) el.classList.remove("scrolled");
     if (elementInView(el, 1)) {
       displayScrollElement(el);
     }
@@ -25,10 +35,15 @@ function handleScrollAnimation(removeScrolledClass = false) {
 document.addEventListener("scroll", handleScrollAnimation);
 window.addEventListener("load", handleScrollAnimation);
 
+
 document.querySelectorAll(".main__slider-arrow").forEach((arrow) => {
   arrow.addEventListener("click", () => {
     handleScrollAnimation(true);
   });
 });
 
-document.querySelector(".product__image").addEventListener("mouseover", handleScrollAnimation);
+document.querySelector(".main__slider-wrapper").addEventListener("transitionstart", function(e){
+  if (e.propertyName === "transform") {
+    handleScrollAnimation(true);
+  }
+})

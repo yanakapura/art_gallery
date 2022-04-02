@@ -1,17 +1,12 @@
 function setLineWidth(e) {
   const width = e.target.offsetWidth;
-  console.log("width = ", width);
   const widthAll = [];
   document.querySelectorAll(".section-tabs__title").forEach((el) => {
     widthAll.push(el.offsetWidth);
   });
-  console.log("widthAll = ", widthAll);
   const newArr = widthAll.splice(0, widthAll.indexOf(width));
-  console.log(widthAll.indexOf(width));
-  console.log("newArr = ", newArr);
   const transformTo =
     newArr.length === 0 ? 0 : newArr.reduce((prev, cur) => prev + cur);
-  console.log("tranfsormTo = ", transformTo);
   document.querySelector(".section-tabs__line-active").style.width = width;
   document.querySelector(
     ".section-tabs__line-active"
@@ -33,12 +28,11 @@ document.querySelectorAll(".section-tabs__title").forEach((el) => {
 });
 
 document.querySelector(".input-arrows").addEventListener("click", function (e) {
-  console.log(e.target.dataset.input);
   const inputNumber = document.querySelector("#input-number");
   if (e.target.dataset.input === "plus") {
     inputNumber.value++;
   } else {
-    inputNumber.value--;
+    inputNumber.value > 0 && inputNumber.value--;
   }
 });
 
@@ -47,3 +41,5 @@ document.querySelector(".form__rating").addEventListener("click", function (e) {
   e.target.classList.toggle("fa-regular");
   e.target.classList.toggle("fa-solid");
 });
+
+setLineWidth(e);

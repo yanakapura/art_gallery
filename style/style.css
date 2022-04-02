@@ -77,6 +77,9 @@ p {
 .header-sm > div {
   padding: 0 3.5rem;
 }
+.menu {
+  cursor: pointer;
+}
 .menu span {
   content: "";
   display: block;
@@ -154,7 +157,7 @@ p {
 }
 
 .menu__arrows::before {
-  transform: rotate(45deg) translate(.5rem, -.5rem);
+  transform: rotate(45deg) translate(0.5rem, -0.5rem);
 }
 .menu__arrows::after {
   transform: rotate(-45deg) translate(0px, 1rem);
@@ -189,9 +192,8 @@ p {
   transform: translate(2.6rem, 3rem) rotate(45deg);
 }
 .button-up::after {
-  transform: translate(.875rem, 3rem) rotate(-45deg);
+  transform: translate(0.875rem, 3rem) rotate(-45deg);
 }
-
 
 .main {
   margin-bottom: 44rem;
@@ -277,7 +279,6 @@ p {
   letter-spacing: 0.1em;
 }
 
-
 .header__icon {
   width: 100%;
   padding: 1rem;
@@ -296,8 +297,14 @@ p {
 }
 
 .main__slider-slide img {
-  width: 100%;
+  /* width: 100%; */
+  width: 110%;
   height: auto;
+  /* transition: 25s; */
+}
+.main__slider-slide img:hover {
+
+  /* transform: translate(-5%, -5%); */
 }
 
 .main__slide-label,
@@ -595,7 +602,7 @@ p {
   width: 80%;
   position: absolute;
   bottom: 10rem;
-  left: .5rem;
+  left: 0.5rem;
 
   background-color: #fff;
 }
@@ -855,21 +862,20 @@ p {
 /* /////////// Section 6. Testimonials ////////// */
 
 .section-6 {
-  height: 40rem;
+  min-height: 40rem;
   align-items: start;
-
 }
 
 .section-6__wrapper {
   position: relative;
-  height: 40rem;
+  min-height: 40rem;
 }
 
 .swiper-testimonial,
 .swiper-testimonial__arrows,
 .section-testimonial__swiper {
   width: 67rem;
-  height: 30rem;
+  min-height: 30rem;
   text-align: center;
 }
 
@@ -898,7 +904,7 @@ p {
   font-size: 2.2rem;
   font-weight: 400;
   letter-spacing: 2px;
-  margin: 4rem 0 1rem;
+  margin: 3rem 0 1rem;
 }
 
 .swiper-testimonial__arrows {
@@ -914,7 +920,7 @@ p {
 }
 
 #swiper-testimonial__pagination {
-  bottom: 5rem;
+  bottom: 4rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -1104,12 +1110,18 @@ p {
 }
 
 .product__cart {
-  position: absolute;
   height: 20rem;
   width: 20rem;
-  background-color: #fff;
+  position: absolute;
   top: 2.5rem;
   left: 2.5rem;
+}
+
+.product__cart-wrapper {
+  position: absolute;
+  height: 0rem;
+  width: 20rem;
+  background-color: #fff;
   opacity: 0;
 
   transition-duration: 0.3s;
@@ -1119,9 +1131,11 @@ p {
   margin: 0;
 }
 
-.product__cart:hover {
+.product__cart:hover .product__cart-wrapper {
+  height: 20rem;
   opacity: 1;
 }
+
 
 .swiper-shop__arrows {
   position: absolute;
@@ -1138,6 +1152,15 @@ p {
   font-size: 2.2rem;
   font-family: inherit;
   margin-top: 2rem;
+}
+
+.product__name {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.product__name:hover {
+  color: #c9ab81;
 }
 
 .product__rating {

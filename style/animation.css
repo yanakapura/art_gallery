@@ -86,15 +86,19 @@
   animation-fill-mode: backwards;
 }
 
-.scrolled.cart-to-bottom {
-  animation: cart-to-bottom 1.3s ease-in-out;
-  animation-delay: .3s;
-  animation-fill-mode: backwards;
-}
-
 .scrolled.opacity-to-1 {
   animation: opacity-to-1 1s ease;
   animation-delay: .3s;
+  animation-fill-mode: backwards;
+}
+.scrolled.mainSlide-to-left {
+  animation: mainSlide-to-left 30s ease;
+  /* animation-delay: .3s; */
+  animation-fill-mode: backwards;
+}
+.scrolled.mainSlide-to-right {
+  animation: mainSlide-to-right 30s ease;
+  /* animation-delay: .3s; */
   animation-fill-mode: backwards;
 }
 
@@ -154,15 +158,6 @@
   }
 }
 
-@keyframes cart-to-bottom {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 20rem;
-  }
-}
-
 @keyframes img-animation {
   0% {
     height: 0%;
@@ -214,3 +209,19 @@
   }
 }
 
+@keyframes mainSlide-to-left {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(-5%, -4%);
+  }
+}
+@keyframes mainSlide-to-right {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(5%,4%);
+  }
+}

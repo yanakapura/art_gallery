@@ -97,7 +97,8 @@
     </header>
 
     <main class="main">
-      <a href="#header" class="button-up js-scroll opacity-to-1"></a>
+      <a href="#header" class="button-up js-scroll opacity-to-1">
+      </a>
       <section class="page-title flex-center">
         <div class="page-title__image"></div>
         <div class="section__title">
@@ -245,17 +246,14 @@
           <div class="review__form">
             <h5 class="characteristic__title">Add your review</h5>
             <span class="review__form-label">Your email address will not be published.  Required fields are marked*</span>
-            <span>Your rating</span>
+            <span class="review__rating-label">Your rating</span>
             <div class="review__rating form__rating">
                 <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
               </div>
 
-              <span>Your review*</span>
-              <textarea type="textarea" required></textarea>
-              <span>Name*</span>
-              <input type="text">
-              <span>Email*</span>
-              <input type="mail">
+              <textarea type="textarea" placeholder="Your review*" required></textarea>
+              <input type="text"placeholder="Name*" required>
+              <input type="mail" placeholder="Email*" required>
               <input type="checkbox">
               <label for="checkbox">Save my name, email, and website in this browser for the next time I comment.</label>
               <button class="btn" type="submit">

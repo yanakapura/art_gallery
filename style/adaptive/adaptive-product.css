@@ -38,9 +38,13 @@
     width: 100%;
   }
   .section-tabs__title h3 {
-    font-size: 22px;
-    padding: 15px;
-  }
+      font-size: 22px;
+      padding: 15px;
+    }
+    .tab-description {
+      width: 90%;
+      margin: auto;
+    }
   .section-tabs__container {
     width: 80%;
   }
@@ -62,6 +66,10 @@
   }
   .input-arrows .fa-angle-down {
     padding-top: 1rem;
+  }
+  .tab-description {
+    width: 100%;
+    margin: auto;
   }
   .characteristic__title,
   .review__title {

@@ -227,7 +227,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .tab-description {
   font-size: 1.9rem;
   font-family: "Alegreya Sans", sans-serif;
-  max-width: 70rem;
   text-align: center;
 }
 
@@ -300,7 +299,11 @@ input[type="number"]::-webkit-outer-spin-button {
 /* //////////////////////////////////// */
 
 .review__form {
-    margin-top: 10rem;
+  margin-top: 10rem;
+
+  /* background: rgb(245 245 245); */
+  /* background: #f8f8f8; */
+  /* padding: 3rem */
 }
 
 .review__form span {
@@ -309,14 +312,20 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 1.6rem;
 }
 
+.review__form .review__rating-label,
+.form__rating {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
 .review__form .review__form-label {
-    font-size: 1.3rem;
-    margin: 0 0 1rem;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
 }
 
 .review__form .review__rating {
-    margin-top: 2rem;
-    font-size: 1.3rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
 }
 
 .review__form textarea,
@@ -324,9 +333,14 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
   height: 5rem;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
-  padding: 2rem 1rem;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.205); */
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  padding: 2rem;
+  margin: 1rem 0;
   font-size: 1.5rem;
+  font-family: "Alegreya Sans", sans-serif;
+
+  /* background: rgb(250 250 250); */
 }
 .review__form textarea:focus-visible,
 .review__form input:focus-visible {
@@ -344,5 +358,5 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .review__form .btn {
-    display: block;
+  display: block;
 }

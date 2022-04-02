@@ -1,6 +1,5 @@
 /* // Большие девайсы (большие десктопы, >= 1200px) */
 @media (min-width: 1200px) and (max-width: 1400px) {
-
 }
 
 /* // Большие девайсы (большие десктопы, >= 992px) */
@@ -8,7 +7,6 @@
   .section-video {
     height: 80rem;
   }
-
 }
 
 /* // Средние девайсы («таблетки», >= 768px)  */
@@ -33,8 +31,11 @@
     height: 90rem;
     padding-top: 4rem;
   }
+  .section-testimonial__wrapper {
+    min-height: 37rem;
+  }
   .swiper-pagination {
-    transform: scale(.6);
+    transform: scale(0.6);
   }
   .map {
     grid-row: 2;
@@ -46,7 +47,6 @@
   .section-video {
     height: 80rem;
   }
- 
 }
 
 /* // Малые девайсы («ландшафтные», >= 575px) */
@@ -82,6 +82,9 @@
 
 /* // Экстрамалые девайсы («портретные телефоны», < 576px) */
 @media (max-width: 575.98px) {
+  .section__title {
+    margin: auto;
+  }
   .section-about {
     height: 70rem;
     display: flex;
@@ -92,13 +95,16 @@
     grid-auto-rows: 20rem;
   }
   .section-collection {
-    height: 60rem;
+    height: 70rem;
   }
   .section-collection__container {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     gap: 4rem;
     width: 80%;
+  }
+  .section-collection__item {
+    justify-self: center;
   }
   .main .section-contacts {
     display: flex;
@@ -116,7 +122,6 @@
     height: 50rem;
     padding: 5rem 0;
   }
-
 }
 
 @media (max-width: 375px) {
@@ -142,8 +147,9 @@
     height: 45rem;
     margin-top: 5rem;
   }
-  .section-testimonial, .section-testimonial__wrapper  {
-      height: 45rem;
+  .section-testimonial,
+  .section-testimonial__wrapper {
+    height: 45rem;
   }
   .main .section-contacts {
     height: 125rem;

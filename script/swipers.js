@@ -9,7 +9,7 @@ const swiperMain = new Swiper(".main__slider", {
     },
 
     autoplay: {
-      delay: 3000,
+      delay: 6000,
     },
   
     pagination: {
