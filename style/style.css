@@ -664,7 +664,7 @@ p {
 
 .section-4 {
   height: 70rem;
-  background: url(img/h1-bg-img-1.jpg) no-repeat;
+  background: url(../img/h1-bg-img-1.jpg) no-repeat;
   background-size: cover;
   /* position: relative; */
 }
@@ -932,7 +932,7 @@ p {
 
 .section-7,
 .section-11 {
-  background: url(img/h1-bg-img-2.jpg) no-repeat;
+  background: url(../img/h1-bg-img-2.jpg) no-repeat;
   height: 90rem;
   overflow: hidden;
   background-size: cover;
@@ -1178,7 +1178,7 @@ p {
 /* ////////////// section 11. contact ///////////// */
 
 .section-11 {
-  background: url(img/h1-bg-img-3.jpg) no-repeat;
+  background: url(../img/h1-bg-img-3.jpg) no-repeat;
 }
 
 .section-11__label {
