@@ -16,15 +16,15 @@
 /* //////////// Section map ////////////////// */
 
 .section-map {
-  height: 60rem;
 }
 
 /* /////////////////////////////////////////// */
 /* /////////////// Section form ///////////////// */
 
 .section-form {
-  height: 45rem;
+  /* height: 45rem; */
   align-items: flex-start;
+  padding: 70px;
 }
 
 .section-form .section__title {

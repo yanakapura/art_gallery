@@ -42,8 +42,11 @@ document.querySelectorAll(".main__slider-arrow").forEach((arrow) => {
   });
 });
 
+
+if (!window.location.pathname.includes("pages")) {
 document.querySelector(".main__slider-wrapper").addEventListener("transitionstart", function(e){
   if (e.propertyName === "transform") {
     handleScrollAnimation(true);
   }
 })
+}

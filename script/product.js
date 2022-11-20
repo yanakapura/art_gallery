@@ -32,7 +32,7 @@ document.querySelector(".input-arrows").addEventListener("click", function (e) {
   if (e.target.dataset.input === "plus") {
     inputNumber.value++;
   } else {
-    inputNumber.value > 0 && inputNumber.value--;
+    inputNumber.value > 1 && inputNumber.value--;
   }
 });
 
@@ -42,4 +42,4 @@ document.querySelector(".form__rating").addEventListener("click", function (e) {
   e.target.classList.toggle("fa-solid");
 });
 
-setLineWidth(e);
+// setLineWidth(e);

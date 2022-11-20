@@ -28,107 +28,142 @@ const testimonials = [
 //////////////////////////////////////////////
 ////////////// Products /////////////////
 
-const products = [
+let products = [
   {
     name: "musea book",
     code: "1",
     oldPrice: "",
-    price: "17$",
+    price: 17,
     rating: 3,
     category: "Brochure",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--1-768x768.jpg",
+    tags: ['polygraphy','art','books'],
+    popularity: 5,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--1-768x768.jpg",
+    image: "../img/shop/shop-img--1-768x768.jpg",
   },
   {
     name: "degas book",
     code: "2",
     oldPrice: "",
-    price: "12$",
+    price: 12,
     rating: 4,
     category: "Souvenirs",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--2-768x768.jpg",
+    tags: ['polygraphy','history','books'],
+    popularity: 7,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--2-768x768.jpg",
+    image: "../img/shop/shop-img--2-768x768.jpg",
   },
   {
     name: "linen bag",
     code: "3",
     oldPrice: "",
-    price: "29$",
+    price: 29,
     rating: 0,
-    category: "Lifestyle",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--3-768x768.jpg",
+    category: "Bags",
+    tags: ['art','expo'],
+    popularity: 9,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--3-768x768.jpg",
+    image: "../img/shop/shop-img--3-768x768.jpg",
   },
   {
     name: "brochure",
     code: "4",
     oldPrice: "",
-    price: "15$",
+    price: 15,
     rating: 2,
     category: "Brochure",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--4-768x768.jpg",
+    tags: ['art','polygraphy', 'expo'],
+    popularity: 4,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--4-768x768.jpg",
+    image: "../img/shop/shop-img--4-768x768.jpg",
   },
   {
     name: "small rug",
     code: "5",
     oldPrice: "",
-    price: "57$",
+    price: 57,
     rating: 4,
-    category: "Museum",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--5-768x768.jpg",
+    category: "Souvenirs",
+    tags: ['art'],
+    popularity: 3,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--5-768x768.jpg",
+    image: "../img/shop/shop-img--5-768x768.jpg",
   },
   {
     name: "sculpture",
     code: "6",
     oldPrice: "30",
-    price: "25$",
+    price: 25,
     rating: 3,
-    category: "Lifestyle",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--6-768x768.jpg",
+    category: "Souvenirs",
+    tags: ['art', 'expo'],
+    popularity: 2,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--6-768x768.jpg",
+    image: "../img/shop/shop-img--6-768x768.jpg",
   },
   {
     name: "mug",
     code: "7",
     oldPrice: "",
-    price: "9$",
+    price: 9,
     rating: 2,
     category: "Souvenirs",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--7-768x768.jpg",
+    tags: [],
+    popularity: 8,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--7-768x768.jpg",
+    image: "../img/shop/shop-img--7-768x768.jpg",
   },
   {
     name: "winslow bag",
     code: "8",
     oldPrice: "",
-    price: "17$",
+    price: 17,
     rating: 3,
-    category: "Lifestyle",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--8-768x768.jpg",
+    category: "Bags",
+    tags: ['art', 'expo'],
+    popularity: 7,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--8-768x768.jpg",
+    image: "../img/shop/shop-img--8-768x768.jpg",
   },
   {
     name: "phone case",
     code: "9",
     oldPrice: "",
-    price: "15$",
+    price: 15,
     rating: 2,
-    category: "Museum",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--9-768x768.jpg",
+    category: "Accessories",
+    tags: ['art', 'history'],
+    popularity: 7,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--9-768x768.jpg",
+    image: "../img/shop/shop-img--9-768x768.jpg",
   },
   {
     name: "ALLEN CARDS",
     code: "10",
     oldPrice: "",
-    price: "15$",
+    price: 15,
     rating: 4,
-    category: "Brochure",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-10-768x768.jpg",
+    category: "Accessories",
+    tags: ['books', 'history', 'polygraphy'],
+    popularity: 6,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-10-768x768.jpg",
+    image: "../img/shop/shop-img-10-768x768.jpg",
   },
   {
     name: "art",
     code: "11",
     oldPrice: "",
-    price: "950$",
+    price: 950,
     rating: 5,
-    category: "Museum",
-    image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-11-768x768.jpg",
+    category: "Souvenirs",
+    tags: ['art', 'expo'],
+    popularity: 1,
+    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-11-768x768.jpg",
+    image: "../img/shop/shop-img-11-768x768.jpg",
   },
 ];
+
+let productsInfo = products;
 
 ////////////////////////////////////////////
 /////////////// FUNCTIONS ////////////////
@@ -139,9 +174,24 @@ function loadMainSlider() {
     newSlide.classList.add("swiper-slide");
     newSlide.classList.add("flex-center");
     newSlide.classList.add("main__slider-slide");
+    // newSlide.innerHTML = `<img class="main-animation js-scroll ${
+    //   i % 2 ? "mainSlide-to-right" : "mainSlide-to-left"
+    // }" src="https://yanakapura.github.io/art_gallery/img/h1-rev-bg-img-${i + 1}.jpg" alt="slide-image-${i + 1}" />
+    // <div class="main__slide-label section__title">
+    //   <h3 class="main-animation js-scroll  top-sm">History of art department</h3>
+    //   <h1 class="slide__title title main-animation js-scroll top">${
+    //     mainSlides[i]
+    //   }</h1>
+    //   <button class="btn main-animation js-scroll top">
+    //     <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+    //       <rect class="shape" height="50" width="155" />
+    //       <div class="btn__text flex-center">View more</div>
+    //     </svg>
+    //   </button>
+    // </div>`;
     newSlide.innerHTML = `<img class="main-animation js-scroll ${
       i % 2 ? "mainSlide-to-right" : "mainSlide-to-left"
-    }" src="https://yanakapura.github.io/art_gallery/img/h1-rev-bg-img-${i + 1}.jpg" alt="slide-image-${i + 1}" />
+    }" src="../img/h1-rev-bg-img-${i + 1}.jpg" alt="slide-image-${i + 1}" />
     <div class="main__slide-label section__title">
       <h3 class="main-animation js-scroll  top-sm">History of art department</h3>
       <h1 class="slide__title title main-animation js-scroll top">${
@@ -166,8 +216,17 @@ function loadEvents() {
     if (i % 2 != 0) {
       newSlide.classList.add("owl-bottom");
     }
+    // newSlide.innerHTML = `<div class="owl__image js-scroll img-animation">
+    //   <img src="https://yanakapura.github.io/art_gallery/img/show-slider-img-${i}.jpg" alt="owl-image-2" />
+    // </div>
+    // <div class="owl__info js-scroll top">
+    //   <p class="event__date">Mar 1 - Mar 3 2022</p>
+    //   <h4 class="event__title">abstract wireframe</h4>
+    //   <span></span>
+    //   <a class="event__link" href="">View more</a>
+    // </div>`;
     newSlide.innerHTML = `<div class="owl__image js-scroll img-animation">
-      <img src="https://yanakapura.github.io/art_gallery/img/show-slider-img-${i}.jpg" alt="owl-image-2" />
+      <img src="../img/show-slider-img-${i}.jpg" alt="owl-image-2" />
     </div>
     <div class="owl__info js-scroll top">
       <p class="event__date">Mar 1 - Mar 3 2022</p>
@@ -202,7 +261,7 @@ function loadProducts() {
     <button class="btn">
           <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
             <rect class="shape" height="50" width="155" />
-            <div class="btn__text flex-center">Add to cart</div>
+            <div class="btn__text flex-center">В корзину</div>
           </svg>
         </button>
         </div>
@@ -256,7 +315,8 @@ function loadProductPage() {
   ).textContent = `2 review for ${products[i].name}`;
 }
 
-if (window.location.pathname.includes("index")) {
+if (!window.location.pathname.includes("pages")) {
+// if (window.location.pathname.includes("")) {
   loadEvents();
   loadProducts();
   loadMainSlider();
@@ -265,16 +325,19 @@ if (window.location.pathname.includes("index")) {
   document
     .querySelector(".swiper-shop__wrapper")
     .addEventListener("click", function (e) {
-      console.log(e.target);
       if (e.target.classList.contains("product__name")) {
-        const currentEl = e.target.dataset.productCode;
-        localStorage.setItem("currentProduct", currentEl);
-        console.log();
-        window.location.href = "pages/product-page.html";
+      openProductPage(e)
       }
     });
 } else if (window.location.pathname.includes("product")) {
   loadProductPage();
 } else if (window.location.pathname.includes("about")) {
   loadTestimonial();
+}
+
+function openProductPage(e) {
+    const currentEl = e.target.dataset.productCode;
+    localStorage.setItem("currentProduct", currentEl);
+    console.log();
+    window.location.href =  !window.location.pathname.includes("pages") ? "pages/product-page.html" : "../pages/product-page.html"
 }

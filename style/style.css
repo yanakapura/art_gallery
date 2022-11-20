@@ -358,11 +358,13 @@ p {
 
 .title::before {
   /* left: -35%; */
-  right: 110%;
+  /* right: 110%; */
+  right: calc(100% + 40px);
 }
 .title::after {
   /* right: -35%; */
-  left: 110%;
+  /* left: 110%; */
+  left: calc(100% + 40px);
 }
 
 .main__slider-bullets {
@@ -552,6 +554,10 @@ p {
 .section-3 {
   height: 100rem;
   flex-direction: column;
+}
+
+.section-3 .title {
+  width: 70%;
 }
 
 .section-3__wrapper {
