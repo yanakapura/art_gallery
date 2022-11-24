@@ -36,15 +36,16 @@
             <li><a href="../index.html#blog" class="nav__link">Блог</a></li>
             <li><a href="../pages/shop.html" class="nav__link">Магазин</a></li>
             <li><a href="../pages/contacts.html" class="nav__link">Контакты</a></li>
-            </li>
+            <link rel="stylesheet" href="../style/chat-bot.css" />
           </ul>
         </nav>
       </div>
       <div class="header-right flex-center">
         <div class="header__icons flex-center">
-          <div class="header__icon">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+          <a href="../pages/cart.html" class="header__icon cart">
+            <i class="fa-solid fa-cart-shopping cart__icon"></i>
+            <span class="cart__count">0</span>
+          </a>
           <div class="header__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -94,6 +95,66 @@
     <main class="main">
       <a href="#header" class="button-up js-scroll opacity-to-1">
       </a>
+
+      <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+          <i
+            id="chat-icon"
+            style="color: #fff"
+            class="fa fa-fw fa-comments-o"
+          ></i>
+        </button>
+        <div class="content">
+          <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+              <div class="chat-container">
+                <!-- Messages -->
+                <div id="chatbox">
+                  <h5 id="chat-timestamp"></h5>
+                  <p id="botStarterMessage" class="botText">
+                    <span>Загрузка...</span>
+                  </p>
+                </div>
+  
+                <!-- User input box -->
+                <div class="chat-bar-input-block">
+                  <div id="userInput">
+                    <input
+                      id="textInput"
+                      class="input-box"
+                      type="text"
+                      name="msg"
+                      placeholder="Нажмите 'Enter' для отправки"
+                    />
+                    <p></p>
+                  </div>
+  
+                  <div class="chat-bar-icons">
+                    <i
+                      id="chat-icon"
+                      style="color: rgba(223, 9, 52, 0.823)"
+                      class="fa fa-fw fa-heart"
+                      onclick="heartButton()"
+                    ></i>
+                    <i
+                      id="chat-icon"
+                      style="color: #333"
+                      class="fa fa-fw fa-send"
+                      onclick="sendButton()"
+                    ></i>
+                  </div>
+                </div>
+  
+                <div id="chat-bar-bottom">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section class="page-title flex-center">
         <div class="page-title__image"></div>
         <div class="section__title">
@@ -110,7 +171,7 @@
             <h2 class="title js-scroll top" id="product-page__title"></h2>
             <div class="section-product__rating product__rating"></div>
             <!-- <p class="section-product__rating-details">(1 customer review)</p> -->
-            <div class="section-product__price product__price">19$</div>
+            <div class="section-product__price product__price"></div>
             <div class="section-product__description">
               <span
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
@@ -126,14 +187,14 @@
                   <i class="fa-solid fa-angle-up" data-input="plus"></i>
                   <i class="fa-solid fa-angle-down" data-input="minus"></i>
                 </span>
-                <button class="btn" type="submit">
+                <button class="btn btn__cart" type="submit">
                   <svg
                     height="50"
                     width="155"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <rect class="shape" height="50" width="155" />
-                    <div class="btn__text flex-center">Добавить в корзину</div>
+                    <div class="btn__text flex-center">В корзину</div>
                   </svg>
                 </button>
               </form>
@@ -191,7 +252,7 @@
           </ul>
         </div>
         <div class="section-tabs__tab tab-review review" data-tab="3">
-          <h3 class="review__title">2 reviews for winslow bag</h3>
+          <h3 class="review__title"></h3>
           <div class="review__reviews">
           <div class="review__item flex">
             <div class="review__image">
@@ -238,30 +299,31 @@
               </div>
             </div>
           </div>
-          <div class="review__form">
+          <form class="review__form">
             <h5 class="characteristic__title">Добавьте ваш отзыв</h5>
             <span class="review__form-label">Ваша электронная почта не будет видна другим. Обязательные для заполнения поля отмечены*</span>
-            <span class="review__rating-label">Your rating</span>
-            <div class="review__rating form__rating">
-                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+            <div class="rating-wrapper">
+              <span class="review__rating-label">Оцените товар</span>
+              <div class="review__rating form__rating">
+                  <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
               </div>
-
-              <textarea type="textarea" placeholder="Your review*" required></textarea>
-              <input type="text"placeholder="Name*" required>
-              <input type="mail" placeholder="Email*" required>
-              <input type="checkbox">
-              <label for="checkbox"> Сохранить мое имя, почту и сайт для последующих входов на страницу.</label>
-              <button class="btn" type="submit">
-                <svg
-                  height="50"
-                  width="155"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect class="shape" height="50" width="155" />
-                  <div class="btn__text flex-center">Отправить</div>
-                </svg>
-              </button>
-        </div>
+            </div>
+            <textarea type="textarea" placeholder="Your review*" required></textarea>
+            <input type="text"placeholder="Name*" required>
+            <input type="mail" placeholder="Email*" required>
+            <input type="checkbox" id="save-acc-checkbox">
+            <label for="save-acc-checkbox"> Сохранить мое имя, почту и сайт для последующих входов на страницу.</label>
+            <button class="btn" type="submit">
+              <svg
+                height="50"
+                width="155"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect class="shape" height="50" width="155" />
+                <div class="btn__text flex-center">Отправить</div>
+              </svg>
+            </button>
+          </form>
     </div>
         </div>
     </div>
@@ -310,9 +372,16 @@
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="../script/script.js"></script>
     <script src="../script/dinamic-loading.js"></script>
     <script src="../script/scroll-animation.js"></script>
     <script src="../script/product.js"></script>
+    <script src="../script/cart.js"></script>
+    <script src="../script/chat-bot.js"></script>
+    <script src="../script/chat-bot-response.js"></script>
   </body>
 </html>

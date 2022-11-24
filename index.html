@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/animation.css" />
     <link rel="stylesheet" href="style/adaptive/adaptive.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/chat-bot.css" />
+    <title>Gallery</title>
   </head>
   <body>
     <header class="header flex">
@@ -48,9 +49,10 @@
           </svg>
         </button>
         <div class="header__icons flex-center">
-          <div class="header__icon">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+          <a href="pages/cart.html" class="header__icon cart">
+            <i class="fa-solid fa-cart-shopping cart__icon"></i>
+            <span class="cart__count">0</span>
+          </a>
           <div class="header__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -96,6 +98,66 @@
     </header>
     <main class="main" id="main">
       <a href="#main" class="button-up js-scroll opacity-to-1"></a>
+
+      <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+          <i
+            id="chat-icon"
+            style="color: #fff"
+            class="fa fa-fw fa-comments-o"
+          ></i>
+        </button>
+        <div class="content">
+          <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+              <div class="chat-container">
+                <!-- Messages -->
+                <div id="chatbox">
+                  <h5 id="chat-timestamp"></h5>
+                  <p id="botStarterMessage" class="botText">
+                    <span>Загрузка...</span>
+                  </p>
+                </div>
+  
+                <!-- User input box -->
+                <div class="chat-bar-input-block">
+                  <div id="userInput">
+                    <input
+                      id="textInput"
+                      class="input-box"
+                      type="text"
+                      name="msg"
+                      placeholder="Нажмите 'Enter' для отправки"
+                    />
+                    <p></p>
+                  </div>
+  
+                  <div class="chat-bar-icons">
+                    <i
+                      id="chat-icon"
+                      style="color: rgba(223, 9, 52, 0.823)"
+                      class="fa fa-fw fa-heart"
+                      onclick="heartButton()"
+                    ></i>
+                    <i
+                      id="chat-icon"
+                      style="color: #333"
+                      class="fa fa-fw fa-send"
+                      onclick="sendButton()"
+                    ></i>
+                  </div>
+                </div>
+  
+                <div id="chat-bar-bottom">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="main__slider swiper">
         <div class="main__slider-wrapper swiper-wrapper">
           <!-- ///// Slides ///// -->
@@ -242,8 +304,8 @@
 
       <section class="section-4 flex-center">
         <div class="section-4__label js-scroll to-side">
-          <h3>STILL&nbsp;LIFE&nbsp;WITH&nbsp;JAR, CUP&nbsp;AND&nbsp;APPLES</h3>
-          <p>Paul Cézanne, 1877</p>
+          <h3>Натюрморт&nbsp;С&nbsp;кувшином,&nbsp; чашкой,&nbsp;и&nbsp;яблоками</h3>
+          <p>Поль Сезанн (Paul Cézanne), 1877</p>
         </div>
       </section>
 
@@ -594,7 +656,7 @@
           </div>
           <div class="section-11__form">
             <input type="text" placeholder="Сообщение" />
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Имя" />
             <input type="email" placeholder="Email" />
             <button class="btn" type="submit">
               <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
@@ -649,9 +711,16 @@
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="script/dinamic-loading.js"></script>
     <script src="script/swipers.js"></script>
     <script src="script/scroll-animation.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/cart.js"></script>
+    <script src="../script/chat-bot.js"></script>
+    <script src="../script/chat-bot-response.js"></script>
   </body>
 </html>

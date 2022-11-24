@@ -14,7 +14,7 @@
     <link rel="icon" href="../img/favicon.jpg" type="image/png" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/pages/style-about.css" />
-    <link rel="stylesheet" href="../style/pages/style-shop.css" />
+    <link rel="stylesheet" href="../style/pages/style-cart.css" />
     <link rel="stylesheet" href="../style/adaptive/adaptive.css" />
     <link rel="stylesheet" href="../style/animation.css" />
     <link rel="stylesheet" href="../style/chat-bot.css" />
@@ -42,10 +42,10 @@
       </div>
       <div class="header-right flex-center">
         <div class="header__icons flex-center">
-          <a href="../pages/cart.html" class="header__icon cart">
-            <i class="fa-solid fa-cart-shopping cart__icon"></i>
-            <span class="cart__count">0</span>
-          </a>
+            <a href="../pages/cart.html" class="header__icon cart">
+                <i class="fa-solid fa-cart-shopping cart__icon"></i>
+                <span class="cart__count">0</span>
+              </a>
           <div class="header__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -95,6 +95,7 @@
     <main class="main">
       <a href="#header" class="button-up js-scroll opacity-to-1">
       </a>
+
 
       <div class="chat-bar-collapsible">
         <button id="chat-button" type="button" class="collapsible">
@@ -155,85 +156,26 @@
         </div>
       </div>
 
-
       <section class="page-title flex-center">
         <div class="page-title__image"></div>
         <div class="section__title">
-          <h1 class="title js-scroll top">Магазин</h1>
+          <h1 class="title js-scroll top">Корзина</h1>
+          <!-- img\h1-bg-img-1.jpg -->
         </div>
       </section>
 
-      <section class="section-shop shop flex">
-        <div class="shop__layout row">
-          <div class="shop__header flex">
-            <span class="shop__results">Показано 1-12 из 15 результатов</span>
-            <div class="shop__sorting">
-              <label for="shop-sorting">Сортировать</label>
-              <select id="shop-sorting">
-                <option value="default" selected>По умолчанию</option>
-                <option value="popularity">По популярности</option>
-                <option value="rating">По рейтингу</option>
-                <option value="price-low-to-high">По возрастанию цены</option>
-                <option value="price-high-to-low">По убыванию цены</option>
-              </select> 
-            </div>
-          </div>
-          <div class="shop__products">
-            <ul class="shop__list">
-             <!-- Товары -->
-            </ul>
-          </div>
+      <section class="section-cart ">
+        <ul class="section-cart__list row">
+        </ul>
+        <div class="section-cart__total row">
+            <h2 class="section-cart__total-price ">Всего: <span id="total-price">20 BYN</span></h2>
+            <button class="btn section-cart__btn">
+                <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="shape" height="50" width="155" />
+                  <div class="btn__text flex-center">Оформить заказ</div>
+                </svg>
+            </button>
         </div>
-        <form class="shop__filter filter">
-          <h2 class="filter__title">Фильтр</h2>
-          <div class="filter__container">
-              <div class="filter__slider-track"></div>
-              <input type="range" min="0" max="200" step="5" value="0" id="slider-1" oninput="slideOne()">
-              <input type="range" min="0" max="200" step="5" value="400" id="slider-2" oninput="slideTwo()">
-          </div>
-          <div class="filter__values">
-            <span>Цена:</span>
-              <span id="range1">
-                  0
-              </span>
-              <span> &dash; </span>
-              <span id="range2">
-                  100
-              </span>
-          </div>
-          <div class="filter__category">
-            <h3 class="filter__title">Раздел</h3>
-            <input type="radio" name="category" id="radio-1" value="brochure">
-            <label for="radio-1">Открытки</label>
-            <input type="radio" name="category" id="radio-2" value="souvenirs">
-            <label for="radio-2">Сувениры</label>
-            <input type="radio" name="category" id="radio-3" value="accessories">
-            <label for="radio-3">Аксессуары</label>
-            <input type="radio" name="category" id="radio-4" value="bags">
-            <label for="radio-4">Сумки</label>
-            <input type="radio" name="category" id="radio-5" value="all">
-            <label for="radio-5">Все</label>
-          </div>
-          <div class="filter__tags">
-            <h3 class="filter__title">Теги</h3>
-            <input type="checkbox" name="tags" id="checkbox-1" value="art">
-            <label for="checkbox-1">Искусство</label>
-            <input type="checkbox" name="tags" id="checkbox-2" value="books">
-            <label for="checkbox-2">Книги</label>
-            <input type="checkbox" name="tags" id="checkbox-3" value="expo">
-            <label for="checkbox-3">Экспозиция</label>
-            <input type="checkbox" name="tags" id="checkbox-4" value="history">
-            <label for="checkbox-4">История</label>
-            <input type="checkbox" name="tags" id="checkbox-5" value="polygraphy">
-            <label for="checkbox-5">Полиграфия</label>
-          </div>
-          <button class="btn filter__btn">
-            <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
-              <rect class="shape" height="50" width="155" />
-              <div class="btn__text flex-center">Отфильтровать</div>
-            </svg>
-          </button>
-        </form>
       </section>
     </main>
 
@@ -290,7 +232,6 @@
     <script src="../script/script.js"></script>
     <script src="../script/dinamic-loading.js"></script>
     <script src="../script/scroll-animation.js"></script>
-    <script src="../script/shop.js"></script>
     <script src="../script/cart.js"></script>
     <script src="../script/chat-bot.js"></script>
     <script src="../script/chat-bot-response.js"></script>

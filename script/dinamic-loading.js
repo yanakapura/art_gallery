@@ -200,7 +200,7 @@ function loadMainSlider() {
       <button class="btn main-animation js-scroll top">
         <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
           <rect class="shape" height="50" width="155" />
-          <div class="btn__text flex-center">View more</div>
+          <div class="btn__text flex-center">Узнать больше</div>
         </svg>
       </button>
     </div>`;
@@ -232,7 +232,7 @@ function loadEvents() {
       <p class="event__date">Mar 1 - Mar 3 2022</p>
       <h4 class="event__title">abstract wireframe</h4>
       <span></span>
-      <a class="event__link" href="">View more</a>
+      <a class="event__link" href="">Узнать больше</a>
     </div>`;
     document.querySelector(".owl__stage").append(newSlide);
   }
@@ -240,6 +240,9 @@ function loadEvents() {
 
 function rating(prod) {
   let html = "";
+  if (!prod.rating) {
+    return '';
+  } 
   for (let i = 0; i < prod.rating; i++) {
     html += "1";
   }
@@ -258,7 +261,7 @@ function loadProducts() {
     <img src="${products[i].image}" alt="" />
     <div class="product__cart">
     <div class="product__cart-wrapper flex-center">
-    <button class="btn">
+    <button class="btn btn__cart">
           <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
             <rect class="shape" height="50" width="155" />
             <div class="btn__text flex-center">В корзину</div>
@@ -273,7 +276,7 @@ function loadProducts() {
   <div class="product__rating">
   ${rating(products[i])}
   </div>
-  <span class="product__price">${products[i].price}</span>`;
+  <span class="product__price">${products[i].price} BYN</span>`;
     document.querySelector(".swiper-shop__wrapper").append(newSlide);
   }
 }
@@ -296,23 +299,13 @@ function loadTestimonial() {
 
 function loadProductPage() {
   const i = +localStorage.getItem("currentProduct") - 1;
-  console.log(i);
-  console.log(products[i]);
-  document.querySelector("#product-page__image").src = products[i].image;
-  document.querySelector("#product-page__title").textContent = products[i].name;
-  document.querySelector(".section-product__rating").innerHTML = rating(
-    products[i]
-  );
-  document.querySelector(".section-product__price").textContent =
-    products[i].price;
-  document.querySelector(".meta__sku").textContent = products[i].code.padStart(
-    3,
-    "0"
-  );
-  document.querySelector(".meta__category").textContent = products[i].category;
-  document.querySelector(
-    ".review__title"
-  ).textContent = `2 review for ${products[i].name}`;
+  $("#product-page__image").attr("src",products[i].image);
+  $("#product-page__title").text(products[i].name);
+  $(".section-product__rating").html(rating(products[i]))
+  $(".section-product__price").text(products[i].price + " BYN");
+  $(".meta__sku").text(products[i].code.padStart(3, "0"))
+  $(".meta__category").text(products[i].category);
+  $(".review__title").text(`2 отзыва на ${products[i].name}`)
 }
 
 if (!window.location.pathname.includes("pages")) {

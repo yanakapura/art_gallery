@@ -49,9 +49,10 @@
           </svg>
         </button>
         <div class="header__icons flex-center">
-          <div class="header__icon">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+          <a href="../pages/cart.html" class="header__icon cart">
+            <i class="fa-solid fa-cart-shopping cart__icon"></i>
+            <span class="cart__count">0</span>
+          </a>
           <div class="header__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -220,8 +221,12 @@
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
-    <
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="../script/script.js"></script>
     <script src="../script/scroll-animation.js"></script>
+    <script src="../script/cart.js"></script>
   </body>
 </html>

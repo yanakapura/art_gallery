@@ -6,7 +6,7 @@ function loadProducts() {
       <img src="${productsInfo[i].image}" alt="" />
       <div class="product__cart">
       <div class="product__cart-wrapper flex-center">
-      <button class="btn">
+      <button class="btn btn__cart">
             <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
               <rect class="shape" height="50" width="155" />
               <div class="btn__text flex-center">В корзину</div>
@@ -21,7 +21,7 @@ function loadProducts() {
     <div class="product__rating">
     ${rating(productsInfo[i])}
     </div>
-    <span class="product__price">${productsInfo[i].price}</span>`;
+    <span class="product__price">${productsInfo[i].price} BYN</span>`;
     document.querySelector(".shop__list").append(newCart);
   }
 }
