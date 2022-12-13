@@ -8,14 +8,15 @@
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
     <link rel="icon" href="img/favicon.jpg" type="image/png" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/animation.css" />
     <link rel="stylesheet" href="style/adaptive/adaptive.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/chat-bot.css" />
+    <title>Gallery</title>
   </head>
   <body>
     <header class="header flex">
@@ -33,7 +34,7 @@
             <li><a href="#events" class="nav__link">события</a></li>
             <li><a href="#history" class="nav__link">история</a></li>
             <li><a href="#blog" class="nav__link">блог</a></li>
-            <li><a href="#shop" class="nav__link">магазин</a></li>
+            <li><a href="pages/shop.html" class="nav__link">магазин</a></li>
             <li>
               <a href="pages/contacts.html" class="nav__link">контакты</a>
             </li>
@@ -48,9 +49,10 @@
           </svg>
         </button>
         <div class="header__icons flex-center">
-          <div class="header__icon">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+          <a href="pages/cart.html" class="header__icon cart">
+            <i class="fa-solid fa-cart-shopping cart__icon"></i>
+            <span class="cart__count">0</span>
+          </a>
           <div class="header__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -96,7 +98,67 @@
     </header>
     <main class="main" id="main">
       <a href="#main" class="button-up js-scroll opacity-to-1"></a>
-      <div class="main__slider">
+
+      <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+          <i
+            id="chat-icon"
+            style="color: #fff"
+            class="fa fa-fw fa-comments-o"
+          ></i>
+        </button>
+        <div class="content">
+          <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+              <div class="chat-container">
+                <!-- Messages -->
+                <div id="chatbox">
+                  <h5 id="chat-timestamp"></h5>
+                  <p id="botStarterMessage" class="botText">
+                    <span>Загрузка...</span>
+                  </p>
+                </div>
+  
+                <!-- User input box -->
+                <div class="chat-bar-input-block">
+                  <div id="userInput">
+                    <input
+                      id="textInput"
+                      class="input-box"
+                      type="text"
+                      name="msg"
+                      placeholder="Нажмите 'Enter' для отправки"
+                    />
+                    <p></p>
+                  </div>
+  
+                  <div class="chat-bar-icons">
+                    <i
+                      id="chat-icon"
+                      style="color: rgba(223, 9, 52, 0.823)"
+                      class="fa fa-fw fa-heart"
+                      onclick="heartButton()"
+                    ></i>
+                    <i
+                      id="chat-icon"
+                      style="color: #333"
+                      class="fa fa-fw fa-send"
+                      onclick="sendButton()"
+                    ></i>
+                  </div>
+                </div>
+  
+                <div id="chat-bar-bottom">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__slider swiper">
         <div class="main__slider-wrapper swiper-wrapper">
           <!-- ///// Slides ///// -->
         </div>
@@ -123,18 +185,6 @@
           <div class="section-1__grid">
             <div class="section-1__grid-item">
               <p>
-<<<<<<< Updated upstream
-                <!-- <span
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita aperiam autem totam, nesciunt iste repellendus,
-                  dignissimos iusto molestiae hic natus ullam tenetur molestias?
-                  Voluptate dolore rem deserunt inventore, quaerat corrupti, non
-                  veniam alias ea quasi eveniet adipisci amet nostrum id quod
-                  quam culpa fugit dicta saepe provident totam. Ullam voluptates
-                  odit porro ex dignissimos sed, quis officiis asperiores magni
-                  dolore tenetur eius ipsam nisi necessitatibus!</span
-                > -->
-=======
                 <span
                   >Направление деятельности галереи связано с прямыми продажами
                   произведений искусства, а также с формированием их провенанса.
@@ -142,16 +192,18 @@
                   с музеями и арт-центрами. Произведения проходят
                   предварительный отбор, сопровождаются рецензиями арт-критиков
                   и искусствоведов, имеют сертификаты подлинности с подписью
-                  авторов.</span
-                >
->>>>>>> Stashed changes
+                  авторов.</span>
               </p>
               <p>
-                АртПорт галерея имеет опыт работы с частными и корпоративными
+                Произведения проходят
+                  предварительный отбор, сопровождаются рецензиями арт-критиков
+                  и искусствоведов, имеют сертификаты подлинности с подписью
+                  авторов.
+                <!-- АртПорт галерея имеет опыт работы с частными и корпоративными
                 клиентами. Здесь вы сможете приобрести авторские арт-объекты в
                 интерьер или подобрать оригинальный подарок в виде произведений
                 искусства. Сотрудники галереи подробно расскажут вам о
-                понравившихся произведениях и помогут с выбором арт-объектов.
+                понравившихся произведениях и помогут с выбором арт-объектов. -->
               </p>
             </div>
             <div class="section-1__grid-item">
@@ -161,19 +213,22 @@
             </div>
             <div class="section-1__grid-item">
               <p>
-                В настоящее время корпоративная коллекция насчитывает более 100
+                АртПорт галерея имеет опыт работы с частными и корпоративными
+                клиентами. Здесь вы сможете приобрести авторские арт-объекты в
+                интерьер или подобрать оригинальный подарок в виде произведений
+                искусства. Сотрудники галереи подробно расскажут вам о
+                понравившихся произведениях и помогут с выбором арт-объектов.
+                
+              </p>
+              <p>В настоящее время корпоративная коллекция насчитывает более 100
                 артефактов, созданных с начала XVI века. В собрании находятся
                 произведения художников, родившихся в пределах границ
                 современной Республики Беларусь, чьи имена получили широкое
-                общественное признание. В силу объективных причин творческое
-                наследие многих из этих авторов не было представлено в музейных
-                собраниях нашей страны.
-              </p>
-              <p>
-                Началу формирования коллекции послужило приобретение в 2011-2012
+                общественное признание.
+                <!-- Началу формирования коллекции послужило приобретение в 2011-2012
                 годах ряда работ всемирно известных художников Парижской школы –
                 уроженцев Беларуси, оригинальные станковые произведения которых
-                отсутствовали на их исторической родине.
+                отсутствовали на их исторической родине. -->
               </p>
               <button class="btn">
                 <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
@@ -249,8 +304,8 @@
 
       <section class="section-4 flex-center">
         <div class="section-4__label js-scroll to-side">
-          <h3>STILL&nbsp;LIFE&nbsp;WITH&nbsp;JAR, CUP&nbsp;AND&nbsp;APPLES</h3>
-          <p>Paul Cézanne, 1877</p>
+          <h3>Натюрморт&nbsp;С&nbsp;кувшином,&nbsp; чашкой,&nbsp;и&nbsp;яблоками</h3>
+          <p>Поль Сезанн (Paul Cézanne), 1877</p>
         </div>
       </section>
 
@@ -551,7 +606,7 @@
               >
             </p>
           </div>
-          <div class="swiper-shop row">
+          <div class="swiper-shop shop row">
             <div class="swiper-shop__wrapper swiper-wrapper">
               <!-- ///////// Slides ///////// -->
             </div>
@@ -601,7 +656,7 @@
           </div>
           <div class="section-11__form">
             <input type="text" placeholder="Сообщение" />
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Имя" />
             <input type="email" placeholder="Email" />
             <button class="btn" type="submit">
               <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
@@ -632,7 +687,7 @@
             <p><a href="#events">События и Шоу</a></p>
             <p><a href="#events">Выставки</a></p>
             <p><a href="#blog">Новости и Обновления</a></p>
-            <p><a href="#shop">Магазин музея</a></p>
+            <p><a href="pages/shop.html">Магазин музея</a></p>
           </div>
           <div class="footer__item">
             <p>Рабочее время</p>
@@ -651,14 +706,21 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="script/dinamic-loading.js"></script>
     <script src="script/swipers.js"></script>
     <script src="script/scroll-animation.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/cart.js"></script>
+    <script src="script/chat-bot.js"></script>
+    <script src="script/chat-bot-response.js"></script>
   </body>
 </html>

@@ -32,14 +32,30 @@ document.querySelector(".input-arrows").addEventListener("click", function (e) {
   if (e.target.dataset.input === "plus") {
     inputNumber.value++;
   } else {
-    inputNumber.value > 0 && inputNumber.value--;
+    inputNumber.value > 1 && inputNumber.value--;
   }
 });
 
+let lastTarget = ''
 document.querySelector(".form__rating").addEventListener("click", function (e) {
-  console.log(e.target.classList);
-  e.target.classList.toggle("fa-regular");
-  e.target.classList.toggle("fa-solid");
+  const stars = [...document.querySelectorAll(".review__rating.form__rating .fa-star")]
+  for (star of stars) {
+    star.classList.remove("fa-solid")
+    star.classList.add("fa-regular");
+  }
+  for (let i = 0; i <= stars.indexOf(e.target); i++) {
+    stars[i].classList.remove("fa-regular");
+    stars[i].classList.add("fa-solid");
+    // e.target.classList.toggle("fa-regular");
+    // e.target.classList.toggle("fa-solid");
+  }
+  if (lastTarget === e.target) {
+    for (star of stars) {
+      star.classList.remove("fa-solid")
+      star.classList.add("fa-regular");
+    }
+  }
+  lastTarget = e.target
 });
 
-setLineWidth(e);
+// setLineWidth(e);

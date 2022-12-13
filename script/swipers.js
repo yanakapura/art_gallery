@@ -98,49 +98,49 @@ const swiperMain = new Swiper(".main__slider", {
     slidesPerView: 1,
   });
   
-  const swiperShop = new Swiper(".swiper-shop", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
+  // const swiperShop = new Swiper(".swiper-shop", {
+  //   // Optional parameters
+  //   direction: "horizontal",
+  //   loop: true,
   
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
 
-    autoplay: {
-      delay: 3000,
-    },
+  //   autoplay: {
+  //     delay: 3000,
+  //   },
   
-    pagination: {
-      el: "#swiper-shop__pagination",
-      clickable: true,
-    },
+  //   pagination: {
+  //     el: "#swiper-shop__pagination",
+  //     clickable: true,
+  //   },
   
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 3,
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 3,
 
-    breakpoints: {
-      // when window width is >= 375px
-      // 375: {
-      //   slidesPerView:1,
-      //   slidesPerGroup: 1
-      // },
-      // when window width is >= 576px
-      375: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      // when window width is >= 768px
-      630: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-      // when window width is >= 640px
-      992: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-      }
-    }
-  });
+  //   breakpoints: {
+  //     // when window width is >= 375px
+  //     // 375: {
+  //     //   slidesPerView:1,
+  //     //   slidesPerGroup: 1
+  //     // },
+  //     // when window width is >= 576px
+  //     375: {
+  //       slidesPerView: 2,
+  //       slidesPerGroup: 2,
+  //     },
+  //     // when window width is >= 768px
+  //     630: {
+  //       slidesPerView: 3,
+  //       slidesPerGroup: 3,
+  //     },
+  //     // when window width is >= 640px
+  //     992: {
+  //       slidesPerView: 4,
+  //       slidesPerGroup: 4,
+  //     }
+  //   }
+  // });

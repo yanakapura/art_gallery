@@ -1,0 +1,188 @@
+.header {
+  position: relative;
+}
+
+.header * {
+  color: black;
+}
+
+.page-title {
+  height: 20rem;
+  justify-content: flex-start;
+}
+
+.page-title__image {
+  background: url("https://yanakapura.github.io/art_gallery/img/h1-bg-img-1.jpg")
+    no-repeat;
+  height: 20rem;
+}
+
+.page-title .section__title {
+  padding: 0 5rem;
+}
+.page-title .title {
+  margin: auto;
+  font-size: 4rem;
+}
+
+.title::after,
+.title::before {
+  display: none;
+}
+
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+.section-cart {
+  padding: 150px 100px;
+}
+
+.section-cart__list {
+  list-style: none;
+}
+
+.section-cart__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+  position: relative;
+  transition: .2s ease;
+}
+
+.section-cart__item:hover {
+  border: 1px solid black;
+}
+
+.product__image {
+  margin: 0;
+  width: 25%;
+}
+
+.product__info {
+  width: 65%;
+  padding: 0 30px;
+}
+
+.section-cart .product__name {
+  font-size: 1.5em;
+}
+
+.product__price {
+  width: 20%;
+  text-align: center;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+.price__total {
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+.price__number {
+  text-transform: lowercase;
+}
+
+.product__price p {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.delete-from-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.delete-from-cart::before,
+.delete-from-cart::after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: -3px;
+    height: 21px;
+    width: 1px;
+    background-color: black;
+    transform: rotate(45deg);
+    display: none;
+    transition: .2s ease;
+}
+.delete-from-cart::after {
+  transform: rotate(-45deg);
+}
+
+.section-cart__item:hover .delete-from-cart::before,
+.section-cart__item:hover .delete-from-cart::after {
+    display: block;
+  }
+  
+
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+.section-cart__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-cart__total-price {
+  margin-top: 70px;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+#total-price {
+  margin-left: 20px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* ////////////////////////////////////////// */
+/* ////////////////////////////////////////// */
+
+.section-checkout {
+    height: fit-content;
+    padding: 0 100px 100px; 
+    display: none;
+}
+
+.checkout__shipping-type {
+    width: 95px;
+    margin-left: 50px;
+}
+
+.checkout__title {
+    margin-left: 0;
+    margin-top: 5rem;
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+
+.checkout__billing-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout__delivery {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.checkout input:not([type='radio']) {
+    margin: 1rem 0 4.8rem;
+    margin-bottom: 4.8rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 1.8rem;
+    font-family: "Alegreya Sans", sans-serif;
+    border: none;
+    color: #383838;
+    border-bottom: 1px solid #b3b3b3;
+    outline: 0;
+    cursor: pointer;
+}

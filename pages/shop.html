@@ -1,0 +1,298 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=EB+Garamond&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="../img/favicon.jpg" type="image/png" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/pages/style-about.css" />
+    <link rel="stylesheet" href="../style/pages/style-shop.css" />
+    <link rel="stylesheet" href="../style/adaptive/adaptive.css" />
+    <link rel="stylesheet" href="../style/animation.css" />
+    <link rel="stylesheet" href="../style/chat-bot.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header flex" id="header">
+      <div class="header-left flex-center">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="logo__image" src="../img/logo-dark.png" alt="logo"
+          /></a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__ul flex-center">
+            <li><a href="../pages/about.html" class="nav__link">О нас</a></li>
+            <li><a href="../index.html#events" class="nav__link">События</a></li>
+            <li><a href="../index.html#history" class="nav__link">История</a></li>
+            <li><a href="../index.html#blog" class="nav__link">Блог</a></li>
+            <li><a href="../pages/shop.html" class="nav__link">Магазин</a></li>
+            <li><a href="../pages/contacts.html" class="nav__link">Контакты</a></li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right flex-center">
+        <div class="header__icons flex-center">
+          <a href="../pages/cart.html" class="header__icon cart">
+            <i class="fa-solid fa-cart-shopping cart__icon"></i>
+            <span class="cart__count">0</span>
+          </a>
+          <div class="header__icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header-sm flex">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="logo__image" src="../img/logo-dark.png" alt="logo" />
+          </a>
+        </div>
+        <div class="menu">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu__wrapper">
+          <ul class="menu__ul flex-center">
+            <li>
+              <a href="pages/about.html" class="menu__link">О нас</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#events" class="menu__link">События</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#history" class="menu__link">История</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#blog" class="menu__link">Блог</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="#shop" class="menu__link">Магазин</a>
+              <div class="menu__arrows"></div>
+            </li>
+            <li>
+              <a href="pages/contacts.html" class="menu__link">Контакты</a>
+              <div class="menu__arrows"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <a href="#header" class="button-up js-scroll opacity-to-1">
+      </a>
+
+      <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+          <i
+            id="chat-icon"
+            style="color: #fff"
+            class="fa fa-fw fa-comments-o"
+          ></i>
+        </button>
+        <div class="content">
+          <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+              <div class="chat-container">
+                <!-- Messages -->
+                <div id="chatbox">
+                  <h5 id="chat-timestamp"></h5>
+                  <p id="botStarterMessage" class="botText">
+                    <span>Загрузка...</span>
+                  </p>
+                </div>
+  
+                <!-- User input box -->
+                <div class="chat-bar-input-block">
+                  <div id="userInput">
+                    <input
+                      id="textInput"
+                      class="input-box"
+                      type="text"
+                      name="msg"
+                      placeholder="Нажмите 'Enter' для отправки"
+                    />
+                    <p></p>
+                  </div>
+  
+                  <div class="chat-bar-icons">
+                    <i
+                      id="chat-icon"
+                      style="color: rgba(223, 9, 52, 0.823)"
+                      class="fa fa-fw fa-heart"
+                      onclick="heartButton()"
+                    ></i>
+                    <i
+                      id="chat-icon"
+                      style="color: #333"
+                      class="fa fa-fw fa-send"
+                      onclick="sendButton()"
+                    ></i>
+                  </div>
+                </div>
+  
+                <div id="chat-bar-bottom">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <section class="page-title flex-center">
+        <div class="page-title__image"></div>
+        <div class="section__title">
+          <h1 class="title js-scroll top">Магазин</h1>
+        </div>
+      </section>
+
+      <section class="section-shop shop flex">
+        <div class="shop__layout row">
+          <div class="shop__header flex">
+            <span class="shop__results">Показано 1-12 из 15 результатов</span>
+            <div class="shop__sorting">
+              <label for="shop-sorting">Сортировать</label>
+              <select id="shop-sorting">
+                <option value="default" selected>По умолчанию</option>
+                <option value="popularity">По популярности</option>
+                <option value="rating">По рейтингу</option>
+                <option value="price-low-to-high">По возрастанию цены</option>
+                <option value="price-high-to-low">По убыванию цены</option>
+              </select> 
+            </div>
+          </div>
+          <div class="shop__products">
+            <ul class="shop__list">
+             <!-- Товары -->
+            </ul>
+          </div>
+        </div>
+        <form class="shop__filter filter">
+          <h2 class="filter__title">Фильтр</h2>
+          <div class="filter__container">
+              <div class="filter__slider-track"></div>
+              <input type="range" min="0" max="200" step="5" value="0" id="slider-1" oninput="slideOne()">
+              <input type="range" min="0" max="200" step="5" value="400" id="slider-2" oninput="slideTwo()">
+          </div>
+          <div class="filter__values">
+            <span>Цена:</span>
+              <span id="range1">
+                  0
+              </span>
+              <span> &dash; </span>
+              <span id="range2">
+                  100
+              </span>
+          </div>
+          <div class="filter__category">
+            <h3 class="filter__title">Раздел</h3>
+            <input type="radio" name="category" id="radio-1" value="brochure">
+            <label for="radio-1">Открытки</label>
+            <input type="radio" name="category" id="radio-2" value="souvenirs">
+            <label for="radio-2">Сувениры</label>
+            <input type="radio" name="category" id="radio-3" value="accessories">
+            <label for="radio-3">Аксессуары</label>
+            <input type="radio" name="category" id="radio-4" value="bags">
+            <label for="radio-4">Сумки</label>
+            <input type="radio" name="category" id="radio-5" value="all">
+            <label for="radio-5">Все</label>
+          </div>
+          <div class="filter__tags">
+            <h3 class="filter__title">Теги</h3>
+            <input type="checkbox" name="tags" id="checkbox-1" value="art">
+            <label for="checkbox-1">Искусство</label>
+            <input type="checkbox" name="tags" id="checkbox-2" value="books">
+            <label for="checkbox-2">Книги</label>
+            <input type="checkbox" name="tags" id="checkbox-3" value="expo">
+            <label for="checkbox-3">Экспозиция</label>
+            <input type="checkbox" name="tags" id="checkbox-4" value="history">
+            <label for="checkbox-4">История</label>
+            <input type="checkbox" name="tags" id="checkbox-5" value="polygraphy">
+            <label for="checkbox-5">Полиграфия</label>
+          </div>
+          <button class="btn filter__btn">
+            <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+              <rect class="shape" height="50" width="155" />
+              <div class="btn__text flex-center">Отфильтровать</div>
+            </svg>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner flex-center">
+        <div class="footer__grid row">
+          <div class="footer__item">
+            <div class="footer__logo">
+              <a href=""><img src="../img/logo-light.png" alt="" /></a>
+            </div>
+            <p id="footer-address">
+              <a href="">673 12 Constitution Lane Massillion</a>
+            </p>
+            <p>781-562-9355, 781-727-6090</p>
+            <p class="footer__license">© 2022 все права музея защищены</p>
+          </div>
+          <div class="footer__item">
+            <p>Информация о музее</p>
+            <p><a href="../index.html#events">События и Шоу</a></p>
+            <p><a href="../index.html#events">Выставки</a></p>
+            <p><a href="../index.html#blog">Новости и Обновления</a></p>
+            <p><a href="../pages/shop.html">Магазин музея</a></p>
+          </div>
+          <div class="footer__item">
+            <p>Рабочее время</p>
+            <p>Вт—Чт: 09:00—19:00</p>
+            <p>Пт—Сб: 09:00—17:00</p>
+            <p>Вс: 08:00—18:00</p>
+            <p>Пн: закрыто</p>
+          </div>
+          <div class="footer__item">
+            <p>Follow us</p>
+            <p><a href="https://www.facebook.com/">Facebook</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+            <p><a href="https://twitter.com/">Twitter</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d84c4d6b5b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/dinamic-loading.js"></script>
+    <script src="../script/scroll-animation.js"></script>
+    <script src="../script/shop.js"></script>
+    <script src="../script/cart.js"></script>
+    <script src="../script/chat-bot.js"></script>
+    <script src="../script/chat-bot-response.js"></script>
+  </body>
+</html>

@@ -31,7 +31,7 @@
             <li><a href="../index.html#events" class="nav__link">События</a></li>
             <li><a href="../index.html#history" class="nav__link">История</a></li>
             <li><a href="../index.html#blog" class="nav__link">Блог</a></li>
-            <li><a href="../index.html#shop" class="nav__link">Магазин</a></li>
+            <li><a href="../pages/shop.html" class="nav__link">Магазин</a></li>
             <li><a href="../pages/contacts.html" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
@@ -44,7 +44,10 @@
           </svg>
         </button>
         <div class="header__icons flex-center">
-          <div class="header__icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <a href="../pages/cart.html" class="header__icon cart">
+            <i class="fa-solid fa-cart-shopping cart__icon"></i>
+            <span class="cart__count">0</span>
+          </a>
           <div class="header__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
       </div>
@@ -299,10 +302,10 @@
           </div>
           <div class="footer__item">
             <p>Информация о музее</p>
-            <p><a href="#events">События и Шоу</a></p>
-            <p><a href="#events">Выставки</a></p>
-            <p><a href="#blog">Новости и Обновления</a></p>
-            <p><a href="#shop">Магазин музея</a></p>
+            <p><a href="../index.html#events">События и Шоу</a></p>
+            <p><a href="../index.html#events">Выставки</a></p>
+            <p><a href="../index.html#blog">Новости и Обновления</a></p>
+            <p><a href="../pages/shop.html">Магазин музея</a></p>
           </div>
           <div class="footer__item">
             <p>Рабочее время</p>
@@ -326,9 +329,14 @@
       src="https://kit.fontawesome.com/d84c4d6b5b.js"
       crossorigin="anonymous"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="../script/dinamic-loading.js"></script>
     <script src="../script/swipers.js"></script>
     <script src="../script/scroll-animation.js"></script>
     <script src="../script/script.js"></script>
+    <script src="../script/cart.js"></script>
   </body>
 </html>

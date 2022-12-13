@@ -176,6 +176,7 @@ p {
   height: 6rem;
   background-color: #272727;
   cursor: pointer;
+  z-index: 10;
 }
 
 .button-up::before,
@@ -286,6 +287,17 @@ p {
   cursor: pointer;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart .cart__count {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -3px;
+}
+
 /* ////////////////////////////////////////// */
 /* //////////// Main slider ////////////// */
 
@@ -358,11 +370,13 @@ p {
 
 .title::before {
   /* left: -35%; */
-  right: 110%;
+  /* right: 110%; */
+  right: calc(100% + 40px);
 }
 .title::after {
   /* right: -35%; */
-  left: 110%;
+  /* left: 110%; */
+  left: calc(100% + 40px);
 }
 
 .main__slider-bullets {
@@ -554,6 +568,10 @@ p {
   flex-direction: column;
 }
 
+.section-3 .title {
+  width: 70%;
+}
+
 .section-3__wrapper {
   position: relative;
 }
@@ -671,7 +689,7 @@ p {
 
 .section-4__label {
   height: 20rem;
-  width: 35rem;
+  width: 42rem;
   background-color: #fff;
   position: absolute;
   right: 20%;
@@ -687,6 +705,7 @@ p {
   margin-left: 5rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
 .section-4__label p {
