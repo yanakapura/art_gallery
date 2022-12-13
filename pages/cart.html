@@ -169,13 +169,55 @@
         </ul>
         <div class="section-cart__total row">
             <h2 class="section-cart__total-price ">Всего: <span id="total-price">20 BYN</span></h2>
-            <button class="btn section-cart__btn">
+            <button class="btn section-cart__btn" id="btn-open-chechout">
                 <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
                   <rect class="shape" height="50" width="155" />
                   <div class="btn__text flex-center">Оформить заказ</div>
                 </svg>
             </button>
         </div>
+      </section>
+
+      <section class="section-checkout">
+        <form class="section-checkout__form checkout row">
+            <div class="checkout__shipping flex">
+                <span>Выберите способ доставки</span>
+                <div class="checkout__shipping-type">
+                    <input type="radio" name="shipping" id="order-shipping-delivery">
+                    <label for="order-shipping-delivery">Доставка</label>
+                    <input type="radio" name="shipping" id="order-shipping-local-pickup">
+                    <label for="order-shipping-local-pickup">Самовывоз</label>
+                </div>
+            </div>
+            <div class="checkout__billing-details">
+                <h2 class="checkout__title title">Реквизиты</h2>
+                <label for="order-first-name">Имя*</label>
+                <input type="text" id="order-first-name" class="chechout__name">
+                <label for="order-last-name">Фамилия*</label>
+                <input type="text" id="order-last-name" class="chechout__name">
+                <label for="order-phone">Телефон*</label>
+                <input type="text" id="order-phone">
+                <label for="order-email">Email*</label>
+                <input type="email" id="order-email">
+            </div>
+            <div class="checkout__delivery">
+                <h2 class="checkout__title title">Доставка</h2>
+                <label for="order-address-country">Страна*</label>
+                <input type="text" id="order-address-country">
+                <label for="order-address-city">Город*</label>
+                <input type="text" id="order-address-city">
+                <label for="order-address-street">Улица*</label>
+                <input type="text" id="order-address-street">
+                <label for="order-address-house">Дом*</label>
+                <input type="text" id="order-address-house">
+            </div>
+            <button class="btn chechout__btn" id="btn-order">
+                <svg height="50" width="155" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="shape" height="50" width="155" />
+                  <div class="btn__text flex-center">Оформить заказ</div>
+                </svg>
+            </button>
+        </form>
       </section>
     </main>
 

@@ -28,142 +28,77 @@ const testimonials = [
 //////////////////////////////////////////////
 ////////////// Products /////////////////
 
-let products = [
-  {
-    name: "musea book",
-    code: "1",
-    oldPrice: "",
-    price: 17,
-    rating: 3,
-    category: "Brochure",
-    tags: ['polygraphy','art','books'],
-    popularity: 5,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--1-768x768.jpg",
-    image: "../img/shop/shop-img--1-768x768.jpg",
-  },
-  {
-    name: "degas book",
-    code: "2",
-    oldPrice: "",
-    price: 12,
-    rating: 4,
-    category: "Souvenirs",
-    tags: ['polygraphy','history','books'],
-    popularity: 7,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--2-768x768.jpg",
-    image: "../img/shop/shop-img--2-768x768.jpg",
-  },
-  {
-    name: "linen bag",
-    code: "3",
-    oldPrice: "",
-    price: 29,
-    rating: 0,
-    category: "Bags",
-    tags: ['art','expo'],
-    popularity: 9,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--3-768x768.jpg",
-    image: "../img/shop/shop-img--3-768x768.jpg",
-  },
-  {
-    name: "brochure",
-    code: "4",
-    oldPrice: "",
-    price: 15,
-    rating: 2,
-    category: "Brochure",
-    tags: ['art','polygraphy', 'expo'],
-    popularity: 4,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--4-768x768.jpg",
-    image: "../img/shop/shop-img--4-768x768.jpg",
-  },
-  {
-    name: "small rug",
-    code: "5",
-    oldPrice: "",
-    price: 57,
-    rating: 4,
-    category: "Souvenirs",
-    tags: ['art'],
-    popularity: 3,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--5-768x768.jpg",
-    image: "../img/shop/shop-img--5-768x768.jpg",
-  },
-  {
-    name: "sculpture",
-    code: "6",
-    oldPrice: "30",
-    price: 25,
-    rating: 3,
-    category: "Souvenirs",
-    tags: ['art', 'expo'],
-    popularity: 2,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--6-768x768.jpg",
-    image: "../img/shop/shop-img--6-768x768.jpg",
-  },
-  {
-    name: "mug",
-    code: "7",
-    oldPrice: "",
-    price: 9,
-    rating: 2,
-    category: "Souvenirs",
-    tags: [],
-    popularity: 8,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--7-768x768.jpg",
-    image: "../img/shop/shop-img--7-768x768.jpg",
-  },
-  {
-    name: "winslow bag",
-    code: "8",
-    oldPrice: "",
-    price: 17,
-    rating: 3,
-    category: "Bags",
-    tags: ['art', 'expo'],
-    popularity: 7,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--8-768x768.jpg",
-    image: "../img/shop/shop-img--8-768x768.jpg",
-  },
-  {
-    name: "phone case",
-    code: "9",
-    oldPrice: "",
-    price: 15,
-    rating: 2,
-    category: "Accessories",
-    tags: ['art', 'history'],
-    popularity: 7,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img--9-768x768.jpg",
-    image: "../img/shop/shop-img--9-768x768.jpg",
-  },
-  {
-    name: "ALLEN CARDS",
-    code: "10",
-    oldPrice: "",
-    price: 15,
-    rating: 4,
-    category: "Accessories",
-    tags: ['books', 'history', 'polygraphy'],
-    popularity: 6,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-10-768x768.jpg",
-    image: "../img/shop/shop-img-10-768x768.jpg",
-  },
-  {
-    name: "art",
-    code: "11",
-    oldPrice: "",
-    price: 950,
-    rating: 5,
-    category: "Souvenirs",
-    tags: ['art', 'expo'],
-    popularity: 1,
-    // image: "https://yanakapura.github.io/art_gallery/img/shop/shop-img-11-768x768.jpg",
-    image: "../img/shop/shop-img-11-768x768.jpg",
-  },
-];
+let products = [];
 
-let productsInfo = products;
+async function getData() {
+  let response = await fetch("http://localhost:5002/getData");
+  let data = await response.json();
+
+  return JSON.parse(data);
+}
+
+if (!window.location.pathname.includes("pages")) {
+getData().then((data) => {
+  products = data;
+  loadProducts();
+
+  const swiperShop = new Swiper(".swiper-shop", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    autoplay: {
+      delay: 3000,
+    },
+
+    pagination: {
+      el: "#swiper-shop__pagination",
+      clickable: true,
+    },
+
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 3,
+
+    breakpoints: {
+      // when window width is >= 375px
+      // 375: {
+      //   slidesPerView:1,
+      //   slidesPerGroup: 1
+      // },
+      // when window width is >= 576px
+      375: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      // when window width is >= 768px
+      630: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      // when window width is >= 640px
+      992: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+    },
+  });
+});
+}
+// async function writeUnsorted(data) {
+//   fetch("http://localhost:5002/writeUnsorted", {
+//     headers: {
+//       "Content-type": "application/json",
+//     },
+//     method: "POST",
+//     body: JSON.stringify(data),
+//   });
+// }
 
 ////////////////////////////////////////////
 /////////////// FUNCTIONS ////////////////
@@ -241,8 +176,8 @@ function loadEvents() {
 function rating(prod) {
   let html = "";
   if (!prod.rating) {
-    return '';
-  } 
+    return "";
+  }
   for (let i = 0; i < prod.rating; i++) {
     html += "1";
   }
@@ -298,18 +233,20 @@ function loadTestimonial() {
 }
 
 function loadProductPage() {
-  const i = +localStorage.getItem("currentProduct") - 1;
-  $("#product-page__image").attr("src",products[i].image);
-  $("#product-page__title").text(products[i].name);
-  $(".section-product__rating").html(rating(products[i]))
-  $(".section-product__price").text(products[i].price + " BYN");
-  $(".meta__sku").text(products[i].code.padStart(3, "0"))
-  $(".meta__category").text(products[i].category);
-  $(".review__title").text(`2 отзыва на ${products[i].name}`)
+  getData().then(products=>{
+    const i = +localStorage.getItem("currentProduct") - 1;
+    $("#product-page__image").attr("src", products[i].image);
+    $("#product-page__title").text(products[i].name);
+    $(".section-product__rating").html(rating(products[i]));
+    $(".section-product__price").text(products[i].price + " BYN");
+    $(".meta__sku").text(products[i].code.padStart(3, "0"));
+    $(".meta__category").text(products[i].category);
+    $(".review__title").text(`2 отзыва на ${products[i].name}`);
+  })
 }
 
 if (!window.location.pathname.includes("pages")) {
-// if (window.location.pathname.includes("")) {
+  // if (window.location.pathname.includes("")) {
   loadEvents();
   loadProducts();
   loadMainSlider();
@@ -319,7 +256,7 @@ if (!window.location.pathname.includes("pages")) {
     .querySelector(".swiper-shop__wrapper")
     .addEventListener("click", function (e) {
       if (e.target.classList.contains("product__name")) {
-      openProductPage(e)
+        openProductPage(e);
       }
     });
 } else if (window.location.pathname.includes("product")) {
@@ -329,8 +266,10 @@ if (!window.location.pathname.includes("pages")) {
 }
 
 function openProductPage(e) {
-    const currentEl = e.target.dataset.productCode;
-    localStorage.setItem("currentProduct", currentEl);
-    console.log();
-    window.location.href =  !window.location.pathname.includes("pages") ? "pages/product-page.html" : "../pages/product-page.html"
+  const currentEl = e.target.dataset.productCode;
+  localStorage.setItem("currentProduct", currentEl);
+  console.log();
+  window.location.href = !window.location.pathname.includes("pages")
+    ? "pages/product-page.html"
+    : "../pages/product-page.html";
 }

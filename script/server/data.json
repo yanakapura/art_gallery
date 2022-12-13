@@ -1,0 +1,121 @@
+[
+    {
+      "name": "Каталог галереи",
+      "code": "1",
+      "oldPrice": "",
+      "price": 17,
+      "rating": 3,
+      "category": "Brochure",
+      "tags": ["polygraphy", "art", "books"],
+      "popularity": 5,
+      "image": "../img/shop/shop-img--1-768x768.jpg"
+    },
+    {
+      "name": "Биография Эдгара Дега",
+      "code": "2",
+      "oldPrice": "",
+      "price": 12,
+      "rating": 4,
+      "category": "Souvenirs",
+      "tags": ["polygraphy", "history", "books"],
+      "popularity": 7,
+      "image": "../img/shop/shop-img--2-768x768.jpg"
+    },
+    {
+      "name": "Льняной шопер №1",
+      "code": "3",
+      "oldPrice": "",
+      "price": 49,
+      "rating": 0,
+      "category": "Bags",
+      "tags": ["art", "expo"],
+      "popularity": 9,
+      "image": "../img/shop/shop-img--3-768x768.jpg"
+    },
+    {
+      "name": "Брошюра",
+      "code": "4",
+      "oldPrice": "",
+      "price": 15,
+      "rating": 2,
+      "category": "Brochure",
+      "tags": ["art", "polygraphy", "expo"],
+      "popularity": 4,
+      "image": "../img/shop/shop-img--4-768x768.jpg"
+    },
+    {
+      "name": "Коврик декоративный",
+      "code": "5",
+      "oldPrice": "",
+      "price": 87,
+      "rating": 4,
+      "category": "Souvenirs",
+      "tags": ["art"],
+      "popularity": 3,
+      "image": "../img/shop/shop-img--5-768x768.jpg"
+    },
+    {
+      "name": "Скульптура 'Вихрь'",
+      "code": "6",
+      "oldPrice": "30",
+      "price": 120,
+      "rating": 3,
+      "category": "Souvenirs",
+      "tags": ["art", "expo"],
+      "popularity": 2,
+      "image": "../img/shop/shop-img--6-768x768.jpg"
+    },
+    {
+      "name": "Кружка",
+      "code": "7",
+      "oldPrice": "",
+      "price": 20,
+      "rating": 2,
+      "category": "Souvenirs",
+      "image": "https://yanakapura.github.io/art_gallery/img/shop/shop-img--7-768x768.jpg"
+    },
+    {
+      "name": "Льняной шопер №2",
+      "code": "8",
+      "oldPrice": "",
+      "price": 49,
+      "rating": 3,
+      "category": "Bags",
+      "tags": ["art", "expo"],
+      "popularity": 7,
+      "image": "../img/shop/shop-img--8-768x768.jpg"
+    },
+    {
+      "name": "Чехол для телефона",
+      "code": "9",
+      "oldPrice": "",
+      "price": 25,
+      "rating": 2,
+      "category": "Accessories",
+      "tags": ["art", "history"],
+      "popularity": 7,
+      "image": "../img/shop/shop-img--9-768x768.jpg"
+    },
+    {
+      "name": "Карточки",
+      "code": "10",
+      "oldPrice": "",
+      "price": 15,
+      "rating": 4,
+      "category": "Accessories",
+      "tags": ["books", "history", "polygraphy"],
+      "popularity": 6,
+      "image": "../img/shop/shop-img-10-768x768.jpg"
+    },
+    {
+      "name": "Скульптура 'Новая Эра'",
+      "code": "11",
+      "oldPrice": "",
+      "price": 450,
+      "rating": 5,
+      "category": "Souvenirs",
+      "tags": ["art", "expo"],
+      "popularity": 1,
+      "image": "../img/shop/shop-img-11-768x768.jpg"
+    }
+  ]

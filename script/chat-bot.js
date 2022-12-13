@@ -49,7 +49,8 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-  let firstMessage = "How's it going?";
+  let firstMessage =
+    "Здравствуйте ! Могу предоставить информацию о предстоящих мероприятих и наличии товаров, а также ответить на вопросы по доставке. Введите мероприятие или наименование товара или вопрос по доставке.";
   document.getElementById("botStarterMessage").innerHTML =
     '<p class="botText"><span>' + firstMessage + "</span></p>";
 
